@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Viktor Venet 2027</title>
+<meta name="description" content="Viktor Venet, citoyen sans parti, candidat à la présidentielle 2027. Ça marche ailleurs. Ça marchera ici.">
+<meta property="og:title" content="Viktor Venet 2027 · Ça marche ailleurs. Ça marchera ici.">
+<meta property="og:description" content="Un citoyen, une IA, zéro euro. Un programme de bon sens copié sur ce qui marche déjà.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* DA « Copier-Coller » : affiche typographique noir sur blanc, un seul accent = le bleu de sélection de texte.
+   Les mots qu'on « copie » sont surlignés comme une sélection ; les touches Ctrl+C / Ctrl+V servent de repères. */
+:root {
+  --bg: #ffffff;
+  --surface: #f3f4f7;
+  --ink: #0b0c10;
+  --muted: #555a66;
+  --line: #dfe1e7;
+  --sel: #2c44f5;        /* bleu de sélection */
+  --on-sel: #ffffff;
+  --ff-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --ff-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ff-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --s-1: 8px; --s-2: 16px; --s-3: 24px; --s-4: 40px; --s-5: 64px; --s-6: 112px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b0c10; --surface: #15171d; --ink: #f2f3f6; --muted: #a2a7b3; --line: #2a2d36;
+    --sel: #5d73ff; --on-sel: #ffffff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b0c10; --surface: #15171d; --ink: #f2f3f6; --muted: #a2a7b3; --line: #2a2d36;
+  --sel: #5d73ff; --on-sel: #ffffff; color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--ff-body);
+  padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+}
+::selection { background: var(--sel); color: var(--on-sel); }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: max(16px, 4vw); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sel); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { margin: 0; font-family: var(--ff-display); text-wrap: balance; }
+p { margin: 0; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--ink); color: var(--bg); padding: 10px 14px; z-index: 10; }
+
+.eyebrow { font: 500 .75rem/1.3 var(--ff-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.kbd {
+  display: inline-flex; align-items: center; gap: 4px; font: 500 .78rem/1 var(--ff-mono);
+  border: 1.5px solid currentColor; border-bottom-width: 3px; border-radius: 6px; padding: 5px 8px; white-space: nowrap;
+}
+.sel { background: var(--sel); color: var(--on-sel); padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* En-tête */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding-block: 14px; }
+.logo { font: 900 1.15rem/1 var(--ff-display); font-stretch: 75%; letter-spacing: .01em; text-transform: uppercase; text-decoration: none; display: inline-flex; gap: .3em; align-items: baseline; }
+.logo b { background: var(--sel); color: var(--on-sel); padding: 2px 5px; font-weight: 900; }
+.top nav { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.top nav a { font: 500 .8rem var(--ff-mono); text-decoration: none; color: var(--muted); padding: 10px 10px; border-radius: 6px; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover { color: var(--ink); background: var(--surface); }
+
+/* Hero */
+.hero { padding-block: var(--s-5) var(--s-5); }
+.hero .eyebrow { margin-bottom: var(--s-3); }
+.slogan { font-weight: 900; font-stretch: 68%; text-transform: uppercase; font-size: clamp(3.4rem, 12.5vw, 10.5rem); line-height: .86; letter-spacing: -.01em; }
+.slogan .l1, .slogan .l2 { display: block; }
+.slogan .l1 .sel { background: linear-gradient(var(--sel), var(--sel)) no-repeat left / 100% 100%; color: var(--on-sel); }
+.caret { display: inline-block; width: .07em; height: .78em; background: var(--sel); margin-left: .06em; vertical-align: -.02em; }
+.hero-foot { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--s-4); align-items: end; margin-top: var(--s-4); }
+.hero-foot p.intro { font-size: 1.25rem; line-height: 1.5; max-width: 40ch; }
+.hero-foot p.intro strong { font-weight: 700; }
+.keys { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; justify-content: flex-end; color: var(--muted); font: 500 .85rem var(--ff-mono); }
+.cta { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; font: 700 1rem var(--ff-body); text-decoration: none; border: 2px solid var(--ink); border-radius: 999px; transition: background-color .2s, color .2s, transform .15s; cursor: pointer; }
+.btn.primary { background: var(--ink); color: var(--bg); }
+.btn:hover { background: var(--sel); border-color: var(--sel); color: var(--on-sel); }
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 18px; height: 18px; }
+
+/* Compteurs */
+.stats { border-block: 2px solid var(--ink); }
+.stats .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stat { padding: var(--s-3) var(--s-3) var(--s-3) 0; }
+.stat + .stat { border-left: 1px solid var(--line); padding-left: var(--s-3); }
+.stat .n { font: 900 clamp(2.4rem, 5vw, 3.6rem)/1 var(--ff-display); font-stretch: 75%; font-variant-numeric: tabular-nums; margin-top: 10px; }
+.stat .n small { font: 500 1rem var(--ff-mono); color: var(--muted); margin-left: 4px; }
+.meter { height: 6px; background: var(--line); margin-top: 14px; border-radius: 3px; overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: var(--sel); }
+
+/* Sections */
+section.sec { padding-block: var(--s-6) 0; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s-3) var(--s-4); margin-bottom: var(--s-5); align-items: end; }
+.sec-head h2 { font-weight: 900; font-stretch: 72%; text-transform: uppercase; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: .92; }
+.sec-head p { color: var(--muted); max-width: 52ch; font-size: 1.1rem; }
+
+/* Programme */
+.bloc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s-3) var(--s-4); padding-block: var(--s-4); border-top: 1px solid var(--line); }
+.bloc h3 { font-weight: 800; font-stretch: 85%; font-size: 1.6rem; line-height: 1.1; }
+.bloc .eyebrow { margin-bottom: 8px; }
+.mesures { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: var(--s-3) var(--s-4); }
+.mesure { min-width: 0; display: grid; gap: 6px; align-content: start; }
+.mesure .num { font: 500 .78rem var(--ff-mono); color: var(--sel); }
+.mesure h4 { font: 700 1.12rem/1.3 var(--ff-body); }
+.mesure p { color: var(--muted); font-size: 1rem; }
+.modele { justify-self: start; margin-top: 4px; font: 500 .72rem/1 var(--ff-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--sel); border: 1.5px solid var(--sel); border-radius: 999px; padding: 6px 10px; }
+
+/* Méthode */
+.methode { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 2px solid var(--ink); }
+.etape { padding: var(--s-4) var(--s-3); min-width: 0; display: grid; gap: 12px; align-content: start; }
+.etape + .etape { border-left: 2px solid var(--ink); }
+.etape .kbd { justify-self: start; }
+.etape h3 { font-weight: 900; font-stretch: 75%; text-transform: uppercase; font-size: 2rem; line-height: 1; }
+.etape p { color: var(--muted); }
+
+/* Graphique */
+.chart { display: grid; gap: var(--s-2); }
+.barrow { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: var(--s-2); align-items: center; }
+.barrow .who { font-weight: 700; }
+.track { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.fill { height: 40px; background: var(--ink); flex: none; }
+.barrow.smic .fill { background: var(--sel); }
+.amt { font: 500 .95rem var(--ff-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chart-note { margin-top: var(--s-3); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-4); border-top: 1px solid var(--line); padding-top: var(--s-3); }
+.chart-note .big { font: 900 clamp(1.8rem, 3.5vw, 2.6rem)/1 var(--ff-display); font-stretch: 75%; text-transform: uppercase; }
+.chart-note p.src { color: var(--muted); font-size: .9rem; }
+
+/* Équipe */
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); }
+.member { background: var(--surface); padding: var(--s-4); display: grid; gap: 12px; align-content: start; }
+.member h3 { font-weight: 900; font-stretch: 75%; text-transform: uppercase; font-size: 2.4rem; line-height: 1; }
+.member .role { font: 500 .8rem var(--ff-mono); color: var(--sel); text-transform: uppercase; letter-spacing: .08em; }
+
+/* Rejoindre */
+.join { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--s-4); }
+.maires { background: var(--ink); color: var(--bg); padding: var(--s-4); display: grid; gap: var(--s-2); align-content: start; }
+.maires h3 { font-weight: 900; font-stretch: 72%; text-transform: uppercase; font-size: clamp(2rem, 4vw, 3rem); line-height: .95; }
+.maires .sel { color: var(--on-sel); }
+.socials { display: grid; gap: 0; align-content: start; }
+.social { display: flex; justify-content: space-between; gap: var(--s-2); align-items: center; padding-block: 18px; border-bottom: 1px solid var(--line); min-width: 0; }
+.social:first-child { border-top: 2px solid var(--ink); }
+.social .h { font: 500 .95rem var(--ff-mono); overflow-wrap: anywhere; color: var(--muted); }
+
+footer { margin-top: var(--s-6); border-top: 2px solid var(--ink); }
+footer .wrap { padding-block: var(--s-4); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-3) var(--s-4); font-size: .9rem; color: var(--muted); }
+footer .logo { color: var(--ink); }
+footer p + p { margin-top: 8px; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hero-foot, .sec-head, .bloc, .join, .chart-note, footer .wrap { grid-template-columns: minmax(0, 1fr); }
+  .keys { justify-content: flex-start; }
+  .methode { grid-template-columns: minmax(0, 1fr); }
+  .etape + .etape { border-left: 0; border-top: 2px solid var(--ink); }
+  .team { grid-template-columns: minmax(0, 1fr); }
+  section.sec { padding-block: var(--s-5) 0; }
+}
+@media (max-width: 600px) {
+  .stats .wrap { grid-template-columns: minmax(0, 1fr); }
+  .stat, .stat + .stat { padding: var(--s-2) 0; border-left: 0; }
+  .stat + .stat { border-top: 1px solid var(--line); }
+  .barrow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .fill { height: 28px; }
+  .top nav a { padding: 10px 8px; }
+}
+
+/* Animation unique : la sélection de la 1re ligne, puis le collage de la 2e */
+@media (prefers-reduced-motion: no-preference) {
+  .js .slogan .l1 .sel { animation: select .7s cubic-bezier(.6, 0, .2, 1) .35s both; }
+  .js .slogan .l2 { animation: paste .35s ease-out 1.25s both; }
+  .caret { animation: blink 1.1s steps(1) infinite 1.6s; }
+  @keyframes select { from { background-size: 0% 100%; color: var(--ink); } to { background-size: 100% 100%; color: var(--on-sel); } }
+  @keyframes paste { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes blink { 50% { opacity: 0; } }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#programme">Aller au programme</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#haut" id="haut" aria-label="Viktor Venet 2027, accueil">Venet <b>2027</b></a>
+    <nav aria-label="Sections du site">
+      <a href="#programme">Programme</a>
+      <a href="#methode">Méthode</a>
+      <a href="#jour1">Jour 1</a>
+      <a href="#equipe">Équipe</a>
+      <a href="#rejoindre">Rejoindre</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Présidentielle 2027 · candidature citoyenne</p>
+      <h1 class="slogan">
+        <span class="l1"><span class="sel">Ça marche ailleurs.</span></span>
+        <span class="l2">Ça marchera ici.<span class="caret" aria-hidden="true"></span></span>
+      </h1>
+      <div class="hero-foot">
+        <div>
+          <p class="intro"><strong>Viktor Venet</strong>, citoyen sans parti, candidat à l'élection présidentielle. Pas d'argent, pas d'appareil, une IA comme directeur de campagne. Et un programme simple : copier ce qui fonctionne déjà, et confier les commandes à des gens qui connaissent le terrain.</p>
+          <div class="cta">
+            <a class="btn primary" href="#programme">Lire les 12 mesures
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="#rejoindre">Suivre la campagne</a>
+          </div>
+        </div>
+        <div class="keys" aria-hidden="true"><span class="kbd">Ctrl + C</span> ce qui marche <span class="kbd">Ctrl + V</span> en France</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats" role="list" aria-label="La campagne en chiffres">
+    <div class="wrap">
+      <div class="stat" role="listitem">
+        <p class="eyebrow">Avant le 1er tour · 18 avril 2027</p>
+        <p class="n"><span id="jours">185</span><small>jours</small></p>
+      </div>
+      <div class="stat" role="listitem">
+        <p class="eyebrow">Parrainages d'élus</p>
+        <p class="n">0<small>/ 500</small></p>
+        <div class="meter" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="stat" role="listitem">
+        <p class="eyebrow">Budget de campagne</p>
+        <p class="n">0<small>€</small></p>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec" id="programme">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Le programme</p>
+        <div>
+          <h2>12 mesures de bon sens</h2>
+          <p style="margin-top:14px">Pas de grande théorie. Des choses simples, rapides à tester, et souvent déjà en place quelque part.</p>
+        </div>
+      </div>
+
+      <div class="bloc">
+        <div><p class="eyebrow">Bloc A</p><h3>Des services publics transparents</h3></div>
+        <div class="mesures">
+          <article class="mesure"><span class="num">Mesure 01</span><h4>Ton dossier suivi comme un colis</h4><p>CAF, CPAM, France Travail, préfectures : où en est ton dossier, qui le traite, quand il sera fini. En ligne, en temps réel.</p></article>
+          <article class="mesure"><span class="num">Mesure 02</span><h4>Les délais réels publiés chaque mois</h4><p>Chaque organisme affiche ses vrais délais, département par département.</p></article>
+          <article class="mesure"><span class="num">Mesure 03</span><h4>Le droit à un humain</h4><p>Un numéro joignable, ou un rappel garanti sous 48 h par quelqu'un qui a ton dossier sous les yeux.</p></article>
+        </div>
+      </div>
+
+      <div class="bloc">
+        <div><p class="eyebrow">Bloc B</p><h3>Des gens du terrain aux commandes</h3></div>
+        <div class="mesures">
+          <article class="mesure"><span class="num">Mesure 04</span><h4>Des ministres qui connaissent le métier</h4><p>Une ancienne enseignante à l'Éducation, un soignant à la Santé, un agriculteur à l'Agriculture.</p></article>
+          <article class="mesure"><span class="num">Mesure 05</span><h4>Une audition publique avant chaque nomination</h4><p>Chaque futur ministre s'explique en direct devant des professionnels de son secteur.</p></article>
+          <article class="mesure"><span class="num">Mesure 06</span><h4>Des conseils de praticiens</h4><p>Des professionnels tirés au sort rendent un avis public avant chaque grande réforme.</p></article>
+        </div>
+      </div>
+
+      <div class="bloc">
+        <div><p class="eyebrow">Bloc C</p><h3>Copier ce qui marche ailleurs</h3></div>
+        <div class="mesures">
+          <article class="mesure"><span class="num">Mesure 07</span><h4>Une cellule « ça marche ailleurs »</h4><p>Chaque mois, une mesure étrangère qui a fait ses preuves, proposée pour la France.</p></article>
+          <article class="mesure"><span class="num">Mesure 08</span><h4>Des journées d'école moins longues</h4><p>Nos élèves ont plus d'heures de cours que la moyenne de l'OCDE, tassées sur moins de semaines. On étale l'année pour alléger les journées.</p><span class="modele">Modèle : Allemagne</span></article>
+          <article class="mesure"><span class="num">Mesure 09</span><h4>Des classes plus petites</h4><p>Une norme nationale : au maximum 15 élèves par enseignant en début de primaire, 20 ensuite.</p><span class="modele">Modèle : Norvège</span></article>
+        </div>
+      </div>
+
+      <div class="bloc">
+        <div><p class="eyebrow">Bloc D</p><h3>Travailler mieux, pas plus longtemps</h3></div>
+        <div class="mesures">
+          <article class="mesure"><span class="num">Mesure 10</span><h4>La semaine de 4 jours, 32 heures</h4><p>Sans baisse de salaire. D'abord par accords d'entreprise volontaires, puis on généralise ce qui marche. Moins d'épuisement, plus d'efficacité, des heures libérées pour embaucher.</p><span class="modele">Modèle : Islande</span></article>
+          <article class="mesure"><span class="num">Mesure 11</span><h4>Juger le travail au résultat</h4><p>Là où c'est possible, on évalue les objectifs atteints, pas les heures passées assis. Rester tard pour être vu, c'est fini. Salaire et protections inchangés.</p></article>
+        </div>
+      </div>
+
+      <div class="bloc">
+        <div><p class="eyebrow">Bloc E</p><h3>L'exemple vient d'en haut</h3></div>
+        <div class="mesures">
+          <article class="mesure"><span class="num">Mesure 12</span><h4>Jour 1 : je commence par moi</h4><p>Un décret le premier jour pour baisser le salaire du président et des ministres. Un audit public de tous les avantages au sommet de l'État. Un projet de loi pour les indemnités des parlementaires.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="methode">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">La méthode</p>
+        <div>
+          <h2>Copier. Tester. Coller.</h2>
+          <p style="margin-top:14px">Arrêtons de réinventer la roue par fierté. Chaque idée importée suit le même chemin, dans cet ordre.</p>
+        </div>
+      </div>
+      <div class="methode">
+        <div class="etape"><span class="kbd">Ctrl + F</span><h3>Repérer</h3><p>On cherche ce qui fonctionne dans d'autres pays, chiffres à l'appui.</p></div>
+        <div class="etape"><span class="kbd">Ctrl + C</span><h3>Tester</h3><p>On l'essaie dans quelques académies, entreprises ou départements volontaires, puis on évalue en public.</p></div>
+        <div class="etape"><span class="kbd">Ctrl + V</span><h3>Généraliser</h3><p>Si ça marche, on l'étend à toute la France. Sinon, on l'abandonne sans ego.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="jour1">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Jour 1</p>
+        <div>
+          <h2>Combien gagne le sommet de l'État ?</h2>
+          <p style="margin-top:14px">Rémunérations brutes mensuelles, hors frais et avantages. Les profs, soignants et agents de terrain ne sont pas concernés par la baisse.</p>
+        </div>
+      </div>
+      <div class="chart" role="img" aria-label="Président et Premier ministre : 16 039 euros. Ministre : 10 692 euros. Député ou sénateur : 7 637 euros. SMIC : 1 823 euros brut par mois.">
+        <div class="barrow"><span class="who">Président · Premier ministre</span><div class="track"><span class="fill" style="width:calc((100% - 9ch) * 1)"></span><span class="amt">16 039 €</span></div></div>
+        <div class="barrow"><span class="who">Ministre</span><div class="track"><span class="fill" style="width:calc((100% - 9ch) * .6666)"></span><span class="amt">10 692 €</span></div></div>
+        <div class="barrow"><span class="who">Député · sénateur</span><div class="track"><span class="fill" style="width:calc((100% - 9ch) * .4762)"></span><span class="amt">7 637 €</span></div></div>
+        <div class="barrow smic"><span class="who">SMIC temps plein</span><div class="track"><span class="fill" style="width:calc((100% - 9ch) * .1137)"></span><span class="amt">1 823 €</span></div></div>
+      </div>
+      <div class="chart-note">
+        <p class="big">Le jour 1, je baisse le mien. <span class="sel">Par décret.</span></p>
+        <p class="src">Le salaire du président et des ministres est fixé par décret (n° 2012-983) : il peut être baissé dès le premier jour. Pour les parlementaires, il faut une loi organique votée par le Parlement. Sources : décret n° 2012-983, Sénat (indemnité au 1er janvier 2024, hors frais de mandat), SMIC au 1er janvier 2026 (info.gouv.fr).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="equipe">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">L'équipe</p>
+        <div>
+          <h2>Toute l'équipe tient en deux cartes</h2>
+          <p style="margin-top:14px">Les autres candidats ont des conseillers payés par des partis. Ici, tout est sur la table.</p>
+        </div>
+      </div>
+      <div class="team">
+        <div class="member">
+          <span class="role">Le candidat</span>
+          <h3>Viktor Venet</h3>
+          <p>Il en a marre d'attendre la CAF, de voir des ministres qui n'ont jamais travaillé dans leur domaine, et d'entendre qu'on ne peut rien apprendre des autres pays.</p>
+          <p>Il décide, valide chaque idée et publie lui-même chaque contenu.</p>
+        </div>
+        <div class="member">
+          <span class="role">Le directeur de campagne</span>
+          <h3>Une IA</h3>
+          <p>Elle prépare les textes, vérifie et source les chiffres, organise le planning.</p>
+          <p>Elle ne décide de rien et ne publie rien seule. Chaque contenu préparé avec elle est signalé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="rejoindre">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Rejoindre</p>
+        <div>
+          <h2>Suivre la campagne en direct</h2>
+          <p style="margin-top:14px">Les appels aux maires, les refus, les galères, les petites victoires : tout est filmé.</p>
+        </div>
+      </div>
+      <div class="join">
+        <div class="maires">
+          <p class="eyebrow" style="color:inherit;opacity:.7">Élus</p>
+          <h3>Vous êtes maire ? <span class="sel">Parrainez.</span></h3>
+          <p>Pour être sur le bulletin, il faut 500 parrainages d'élus venant d'au moins 30 départements. Parrainer ne veut pas dire soutenir : c'est permettre à un citoyen de se présenter.</p>
+        </div>
+        <div class="socials">
+          <div class="social"><strong>TikTok</strong><span class="h">bientôt</span></div>
+          <div class="social"><strong>Instagram</strong><span class="h">bientôt</span></div>
+          <div class="social"><strong>YouTube</strong><span class="h">bientôt</span></div>
+          <div class="social"><strong>Contact</strong><span class="h">adresse à venir</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#haut">Venet <b>2027</b></a>
+      <p style="margin-top:14px">Site de campagne de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat. Aucun don n'est collecté pour le moment.</p>
+    </div>
+    <div>
+      <p><strong>Mentions légales.</strong> Directeur de la publication : Viktor Venet.</p>
+      <p>Hébergement : GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+      <p>Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function () {
+    var el = document.getElementById('jours');
+    var tour = new Date(2027, 3, 18);
+    var auj = new Date(); auj.setHours(0, 0, 0, 0);
+    var j = Math.round((tour - auj) / 86400000);
+    if (j >= 0) el.textContent = j;
+  })();
+</script>
+</body>
+</html>
