@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Viktor Venet 2027</title>
-<meta name="description" content="Viktor Venet, citoyen sans parti, candidat à la présidentielle 2027. Ça marche ailleurs. Ça marchera ici.">
-<meta property="og:title" content="Viktor Venet 2027 · Ça marche ailleurs. Ça marchera ici.">
-<meta property="og:description" content="Un citoyen, une IA, zéro euro. Un programme de bon sens copié sur ce qui marche déjà.">
+<meta name="description" content="Viktor Venet, citoyen sans parti, candidat à la présidentielle 2027. Rendez-nous des comptes.">
+<meta property="og:title" content="Viktor Venet 2027 · Rendez-nous des comptes.">
+<meta property="og:description" content="Un citoyen, une IA, zéro euro. Des services publics qui répondent et un pouvoir transparent.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* DA « Copier-Coller » : affiche typographique noir sur blanc, un seul accent = le bleu de sélection de texte.
-   Les mots qu'on « copie » sont surlignés comme une sélection ; les touches Ctrl+C / Ctrl+V servent de repères. */
+/* DA « Surligné » : affiche typographique noir sur blanc, un seul accent bleu qui surligne ce qui compte,
+   comme on surligne une ligne d'un dossier qu'on exige de voir. */
 :root {
   --bg: #ffffff;
   --surface: #f3f4f7;
@@ -76,11 +76,9 @@ p { margin: 0; }
 .slogan { font-weight: 900; font-stretch: 68%; text-transform: uppercase; font-size: clamp(3.4rem, 12.5vw, 10.5rem); line-height: .96; letter-spacing: -.01em; }
 .slogan .l1, .slogan .l2 { display: block; }
 .slogan .l1 .sel { background: linear-gradient(var(--sel), var(--sel)) no-repeat left / 100% 100%; color: var(--on-sel); }
-.caret { display: inline-block; width: .07em; height: .78em; background: var(--sel); margin-left: .06em; vertical-align: -.02em; }
 .hero-foot { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--s-4); align-items: end; margin-top: var(--s-4); }
 .hero-foot p.intro { font-size: 1.25rem; line-height: 1.5; max-width: 40ch; }
 .hero-foot p.intro strong { font-weight: 700; }
-.keys { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; justify-content: flex-end; color: var(--muted); font: 500 .85rem var(--ff-mono); }
 .cta { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
 .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; font: 700 1rem var(--ff-body); text-decoration: none; border: 2px solid var(--ink); border-radius: 999px; transition: background-color .2s, color .2s, transform .15s; cursor: pointer; }
 .btn.primary { background: var(--ink); color: var(--bg); }
@@ -119,7 +117,7 @@ section.sec { padding-block: var(--s-6) 0; }
 .methode { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 2px solid var(--ink); }
 .etape { padding: var(--s-4) var(--s-3); min-width: 0; display: grid; gap: 12px; align-content: start; }
 .etape + .etape { border-left: 2px solid var(--ink); }
-.etape .kbd { justify-self: start; }
+.step { font: 500 .78rem var(--ff-mono); color: var(--sel); text-transform: uppercase; letter-spacing: .08em; }
 .etape h3 { font-weight: 900; font-stretch: 75%; text-transform: uppercase; font-size: 2rem; line-height: 1; }
 .etape p { color: var(--muted); }
 
@@ -159,8 +157,7 @@ footer p + p { margin-top: 8px; }
 /* Responsive */
 @media (max-width: 860px) {
   .hero-foot, .sec-head, .bloc, .join, .chart-note, footer .wrap { grid-template-columns: minmax(0, 1fr); }
-  .keys { justify-content: flex-start; }
-  .methode { grid-template-columns: minmax(0, 1fr); }
+    .methode { grid-template-columns: minmax(0, 1fr); }
   .etape + .etape { border-left: 0; border-top: 2px solid var(--ink); }
   .team { grid-template-columns: minmax(0, 1fr); }
   section.sec { padding-block: var(--s-5) 0; }
@@ -174,14 +171,10 @@ footer p + p { margin-top: 8px; }
   .top nav a { padding: 10px 8px; }
 }
 
-/* Animation unique : la sélection de la 1re ligne, puis le collage de la 2e */
+/* Animation unique : le surligneur passe sur « des comptes » */
 @media (prefers-reduced-motion: no-preference) {
   .js .slogan .l1 .sel { animation: select .7s cubic-bezier(.6, 0, .2, 1) .35s both; }
-  .js .slogan .l2 { animation: paste .35s ease-out 1.25s both; }
-  .caret { animation: blink 1.1s steps(1) infinite 1.6s; }
   @keyframes select { from { background-size: 0% 100%; color: var(--ink); } to { background-size: 100% 100%; color: var(--on-sel); } }
-  @keyframes paste { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-  @keyframes blink { 50% { opacity: 0; } }
 }
 </style>
 </head>
@@ -206,19 +199,18 @@ footer p + p { margin-top: 8px; }
     <div class="wrap">
       <p class="eyebrow">Présidentielle 2027 · candidature citoyenne</p>
       <h1 class="slogan">
-        <span class="l1"><span class="sel">Ça marche ailleurs.</span></span>
-        <span class="l2">Ça marchera ici.<span class="caret" aria-hidden="true"></span></span>
+        <span class="l2">Rendez-nous</span>
+        <span class="l1"><span class="sel">des comptes.</span></span>
       </h1>
       <div class="hero-foot">
         <div>
-          <p class="intro"><strong>Viktor Venet</strong>, citoyen sans parti, candidat à l'élection présidentielle. Pas d'argent, pas d'appareil, une IA comme directeur de campagne. Et un programme simple : copier ce qui fonctionne déjà, et confier les commandes à des gens qui connaissent le terrain.</p>
+          <p class="intro"><strong>Viktor Venet</strong>, citoyen sans parti, candidat à l'élection présidentielle. Pas d'argent, pas d'appareil, une IA comme directeur de campagne. Et une exigence simple : des services publics qui répondent vraiment, un pouvoir qui montre ses dossiers, et des gens du terrain aux commandes.</p>
           <div class="cta">
-            <a class="btn primary" href="#programme">Lire les 12 mesures
+            <a class="btn primary" href="#programme">Lire les 14 mesures
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="btn" href="#rejoindre">Suivre la campagne</a>
           </div>
         </div>
-        <div class="keys" aria-hidden="true"><span class="kbd">Ctrl + C</span> ce qui marche <span class="kbd">Ctrl + V</span> en France</div>
       </div>
     </div>
   </section>
@@ -246,7 +238,7 @@ footer p + p { margin-top: 8px; }
       <div class="sec-head">
         <p class="eyebrow">Le programme</p>
         <div>
-          <h2>12 mesures de bon sens</h2>
+          <h2>14 mesures de bon sens</h2>
           <p style="margin-top:14px">Pas de grande théorie. Des choses simples, rapides à tester, et souvent déjà en place quelque part.</p>
         </div>
       </div>
@@ -270,7 +262,7 @@ footer p + p { margin-top: 8px; }
       </div>
 
       <div class="bloc">
-        <div><p class="eyebrow">Bloc C</p><h3>Copier ce qui marche ailleurs</h3></div>
+        <div><p class="eyebrow">Bloc C</p><h3>S'inspirer de ce qui marche ailleurs</h3></div>
         <div class="mesures">
           <article class="mesure"><span class="num">Mesure 07</span><h4>Une cellule « ça marche ailleurs »</h4><p>Chaque mois, une mesure étrangère qui a fait ses preuves, proposée pour la France.</p></article>
           <article class="mesure"><span class="num">Mesure 08</span><h4>Des journées d'école moins longues</h4><p>Nos élèves ont plus d'heures de cours que la moyenne de l'OCDE, tassées sur moins de semaines. On étale l'année pour alléger les journées.</p><span class="modele">Modèle : Allemagne</span></article>
@@ -287,9 +279,11 @@ footer p + p { margin-top: 8px; }
       </div>
 
       <div class="bloc">
-        <div><p class="eyebrow">Bloc E</p><h3>L'exemple vient d'en haut</h3></div>
+        <div><p class="eyebrow">Bloc E</p><h3>Un pouvoir qui rend des comptes</h3></div>
         <div class="mesures">
           <article class="mesure"><span class="num">Mesure 12</span><h4>Jour 1 : je commence par moi</h4><p>Un décret le premier jour pour baisser le salaire du président et des ministres. Un audit public de tous les avantages au sommet de l'État. Un projet de loi pour les indemnités des parlementaires.</p></article>
+          <article class="mesure"><span class="num">Mesure 13</span><h4>Les dossiers des ministres en accès libre</h4><p>Notes, études, agendas : publiés par défaut et consultables par tous, sans demande ni recours. Plus besoin d'être journaliste pour savoir ce que décide un ministère.</p><span class="modele">Modèle : Suède</span></article>
+          <article class="mesure"><span class="num">Mesure 14</span><h4>Chaque élu écoutable en direct</h4><p>Un poste avec micro pour chaque député et sénateur, diffusé en direct : écoutez l'élu de votre choix. La présence est publiée, et une absence devient un choix visible.</p></article>
         </div>
       </div>
     </div>
@@ -300,14 +294,14 @@ footer p + p { margin-top: 8px; }
       <div class="sec-head">
         <p class="eyebrow">La méthode</p>
         <div>
-          <h2>Copier. Tester. Coller.</h2>
+          <h2>Repérer. Tester. Généraliser.</h2>
           <p style="margin-top:14px">Arrêtons de réinventer la roue par fierté. Chaque idée importée suit le même chemin, dans cet ordre.</p>
         </div>
       </div>
       <div class="methode">
-        <div class="etape"><span class="kbd">Ctrl + F</span><h3>Repérer</h3><p>On cherche ce qui fonctionne dans d'autres pays, chiffres à l'appui.</p></div>
-        <div class="etape"><span class="kbd">Ctrl + C</span><h3>Tester</h3><p>On l'essaie dans quelques académies, entreprises ou départements volontaires, puis on évalue en public.</p></div>
-        <div class="etape"><span class="kbd">Ctrl + V</span><h3>Généraliser</h3><p>Si ça marche, on l'étend à toute la France. Sinon, on l'abandonne sans ego.</p></div>
+        <div class="etape"><span class="step">Étape 1</span><h3>Repérer</h3><p>On cherche ce qui fonctionne dans d'autres pays, chiffres à l'appui.</p></div>
+        <div class="etape"><span class="step">Étape 2</span><h3>Tester</h3><p>On l'essaie dans quelques académies, entreprises ou départements volontaires, puis on évalue en public.</p></div>
+        <div class="etape"><span class="step">Étape 3</span><h3>Généraliser</h3><p>Si ça marche, on l'étend à toute la France. Sinon, on l'abandonne sans ego.</p></div>
       </div>
     </div>
   </section>
