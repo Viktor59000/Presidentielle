@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Les comptes de la campagne · Venet 2027</title>
+<meta name="description" content="Argent, parrainages, presse, IA : tous les comptes de la campagne de Viktor Venet, publiés et mis à jour.">
+<meta property="og:title" content="Les comptes de la campagne · Venet 2027">
+<meta property="og:description" content="Argent, parrainages, presse, IA : tous les comptes de la campagne de Viktor Venet, publiés et mis à jour.">
+<meta property="og:image" content="https://viktor59000.github.io/Presidentielle/img/og.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#FF5A1F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Schibsted+Grotesk:wght@400;500;700&display=swap">
+<style>
+:root {
+  --paper: #ffffff; --paper-2: #f1f2f4; --ink: #15171c; --muted: #5b6070; --rule: #dcdee3;
+  --orange: #ff5a1f; --orange-text: #c2410c; --ok: #1f7a4d;
+  --ff-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --ff-body: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; --ok: #4ccf8f; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; --ok: #4ccf8f; color-scheme: dark; }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--ff-body); -webkit-font-smoothing: antialiased; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+a { color: var(--orange-text); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .92; text-wrap: balance; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 4vw); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
+.logo { display: inline-flex; }
+.logo svg { height: 22px; width: auto; display: block; }
+.logo .l { fill: var(--ink); } .logo .b { fill: var(--orange); }
+.top nav { display: flex; flex-wrap: wrap; margin-inline: -10px; }
+.top nav a { color: var(--muted); text-decoration: none; font-weight: 500; padding: 10px; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover, .top nav a[aria-current] { color: var(--ink); }
+.cover { background: var(--orange); color: #15171c; }
+.cover .wrap { padding-block: clamp(40px, 6vw, 72px); display: grid; gap: 18px; }
+.cover .k { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
+.cover h1 { font-size: clamp(3rem, 10vw, 7.5rem); line-height: .86; }
+.cover p { font-size: 1.15rem; max-width: 56ch; border-top: 2px solid #15171c; padding-top: 16px; }
+section.sec { padding-block: clamp(48px, 7vw, 88px) 0; }
+.sec h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 8px; }
+.sec .intro { color: var(--muted); max-width: 60ch; margin-bottom: 28px; }
+.rule { border-top: 2px solid var(--ink); }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; font: 700 1rem var(--ff-body); text-decoration: none; border: 2px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; transition: background-color .2s, color .2s; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn.solid:hover { background: transparent; color: var(--ink); }
+footer { margin-top: clamp(72px, 10vw, 112px); background: #15171c; color: #a3a8b5; }
+footer .wrap { padding-block: 40px; font-size: .92rem; display: grid; gap: 8px; }
+footer strong { color: #fff; }
+footer .logo .l { fill: #fff; }
+
+.tiles { background: #15171c; color: #f3f4f6; }
+.tiles .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tile { padding: 24px 20px 26px 0; }
+.tile + .tile { border-left: 1px solid #2e323b; padding-left: 20px; }
+.tile .k { font: 500 .8rem var(--ff-body); letter-spacing: .08em; text-transform: uppercase; color: #a3a8b5; }
+.tile .n { font: 900 clamp(2.2rem, 5vw, 3.4rem)/1 var(--ff-display); font-variant-numeric: tabular-nums; margin-top: 8px; }
+.tile .n small { font: 500 1rem var(--ff-body); color: #a3a8b5; margin-left: 6px; }
+.tile .o { color: var(--orange); }
+.meter { height: 14px; background: var(--paper-2); margin-bottom: 24px; }
+.meter i { display: block; height: 100%; background: var(--orange); min-width: 3px; }
+.table { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th { text-align: left; font: 700 .78rem var(--ff-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 12px 12px 12px 0; border-bottom: 1px solid var(--rule); }
+td { padding: 14px 12px 14px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.num, th.num { text-align: right; white-space: nowrap; padding-right: 0; }
+tfoot td { font-weight: 700; border-bottom: 0; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { padding: 14px 0 14px 30px; border-bottom: 1px solid var(--rule); position: relative; }
+.list li::before { content: ""; position: absolute; left: 0; top: 22px; width: 16px; height: 4px; background: var(--orange); box-shadow: 0 7px 0 var(--orange), 0 -7px 0 var(--orange); }
+.journal { list-style: none; margin: 0; padding: 0; }
+.journal li { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 4px 24px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.journal time { font: 800 1.2rem var(--ff-display); text-transform: uppercase; color: var(--orange-text); }
+.maj { color: var(--muted); font-size: .9rem; margin-top: 28px; }
+@media (max-width: 860px) { .two { grid-template-columns: minmax(0, 1fr); } .tiles .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tile:nth-child(3) { border-left: 0; padding-left: 0; } .tile:nth-child(n+3) { border-top: 1px solid #2e323b; } }
+@media (max-width: 600px) { .journal li { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+  <nav aria-label="Navigation"><a href="index.html">Accueil</a><a href="programme.html">Programme</a><a href="quiz.html">Quiz</a><a href="comptes.html" aria-current="page">Les comptes</a><a href="presse.html">Presse</a></nav>
+</div></header>
+<main>
+<section class="cover"><div class="wrap">
+  <span class="k">Transparence · mis à jour régulièrement</span>
+  <h1>Les comptes<br>de la campagne.</h1>
+  <p>Je demande à l'État de rendre des comptes. Je commence par les miens : l'argent, les parrainages, la presse, et ce que fait l'IA. Tout est ici, même quand c'est zéro.</p>
+</div></section>
+
+<div class="tiles"><div class="wrap">
+  <div class="tile"><p class="k">Argent reçu</p><p class="n">0 €</p></div>
+  <div class="tile"><p class="k">Argent dépensé</p><p class="n">0 €</p></div>
+  <div class="tile"><p class="k">Parrainages</p><p class="n"><span class="o">0</span><small>/ 500</small></p></div>
+  <div class="tile"><p class="k">Maires contactés</p><p class="n">0</p></div>
+</div></div>
+
+<section class="sec"><div class="wrap">
+  <h2>Les parrainages</h2>
+  <p class="intro">Il faut 500 signatures d'élus, venant d'au moins 30 départements, avec au maximum 50 par département. Chaque appel, chaque promesse et chaque refus est compté ici.</p>
+  <div class="meter" role="img" aria-label="0 parrainages sur 500"><i style="width:0.0%"></i></div>
+  <div class="table rule"><table>
+    <tr><td>Maires contactés</td><td class="num">0</td></tr>
+    <tr><td>Promesses de parrainage</td><td class="num">0</td></tr>
+    <tr><td>Refus</td><td class="num">0</td></tr>
+    <tr><td>Parrainages validés par le Conseil constitutionnel</td><td class="num"><strong>0</strong></td></tr>
+    <tr><td>Départements représentés</td><td class="num">0 / 30 minimum</td></tr>
+  </table></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <h2>L'argent</h2>
+  <p class="intro">Chaque euro reçu ou dépensé est publié ici. Aucun don n'est accepté pour l'instant : la loi impose d'abord de désigner un mandataire financier, et nous le ferons avant d'accepter le premier euro.</p>
+  <div class="table rule"><table>
+    <thead><tr><th>Date</th><th>Ligne</th><th class="num">Montant</th></tr></thead>
+    <tbody><tr><td>15 octobre 2026</td><td>Hébergement du site (GitHub Pages, gratuit)</td><td class="num">0 €</td></tr><tr><td>15 octobre 2026</td><td>Logo, charte graphique et site, réalisés avec l&#x27;IA</td><td class="num">0 €</td></tr></tbody>
+    <tfoot><tr><td></td><td>Total dépensé</td><td class="num">0 €</td></tr></tfoot>
+  </table></div>
+</div></section>
+
+<section class="sec"><div class="wrap two">
+  <div>
+    <h2>Ce que fait l'IA</h2>
+    <p class="intro">Mon directeur de campagne est une intelligence artificielle. Voici exactement ce qu'elle fait. Elle ne décide de rien et ne publie rien seule.</p>
+    <ul class="list rule"><li>Rédaction du programme complet, relu et validé par Viktor</li><li>Recherche et vérification des chiffres, avec les sources publiées</li><li>Création du logo, de la charte graphique et de ce site</li><li>Préparation des scripts vidéo et du communiqué de presse</li></ul>
+  </div>
+  <div>
+    <h2>La visibilité</h2>
+    <p class="intro">Presse et réseaux sociaux, sans arrondi.</p>
+    <div class="table rule"><table>
+      <tr><td>Médias contactés</td><td></td><td class="num">0</td></tr>
+      <tr><td>Articles et reportages</td><td></td><td class="num">0</td></tr>
+      <tr><td>TikTok</td><td>@venet2027</td><td class="num">pas encore créé</td></tr><tr><td>Instagram</td><td>@venet2027</td><td class="num">pas encore créé</td></tr><tr><td>YouTube</td><td>@venet2027</td><td class="num">pas encore créé</td></tr>
+    </table></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <h2>Le journal de campagne</h2>
+  <p class="intro">Les étapes, dans l'ordre, du plus récent au plus ancien.</p>
+  <ol class="journal rule"><li><time datetime="2026-10-15">15 octobre 2026</time><p>Nouvelle identité visuelle : le logo VENET aux signes égal. Le programme complet est publié.</p></li><li><time datetime="2026-10-15">15 octobre 2026</time><p>Le slogan « Rendez-nous des comptes » est choisi, et le programme de 16 mesures est validé.</p></li><li><time datetime="2026-10-15">15 octobre 2026</time><p>Viktor décide de se présenter à l&#x27;élection présidentielle. Le premier site est en ligne.</p></li></ol>
+</div></section>
+<div class="wrap"><p class="maj">Dernière mise à jour : 15 octobre 2026.</p></div>
+</main>
+<footer><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+  <p><strong>Rendez-nous des comptes.</strong> Site de campagne de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat.</p>
+  <p>Directeur de la publication : Viktor Venet. Hébergement : GitHub Pages, GitHub Inc., San Francisco, États-Unis. Ce site ne dépose aucun cookie.</p>
+</div></footer>
+
+</body>
+</html>
