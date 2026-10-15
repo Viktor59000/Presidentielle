@@ -94,92 +94,112 @@ footer .liens a:hover { color: var(--orange); }
 footer .legal { grid-column: 1 / -1; border-top: 1px solid #2e323b; padding-top: 18px; display: grid; gap: 4px; }
 @media (max-width: 860px) { footer .wrap { grid-template-columns: minmax(0, 1fr); } }
 :root { --on-orange: #15171c; }
-a { color: inherit; }
-h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .92; letter-spacing: .005em; text-wrap: balance; }
-.eq { display: inline-grid; gap: 3px; width: 18px; flex: none; }
-.eq i { display: block; height: 4px; background: var(--orange); }
-.label { display: inline-flex; align-items: center; gap: 10px; font: 700 .78rem/1 var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
+.label { display: inline-flex; align-items: center; gap: 12px; font: 700 .78rem/1 var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
+.bars { display: inline-grid; gap: 3px; width: 18px; flex: none; }
+.bars i { display: block; height: 4px; background: var(--orange); }
+.band { padding-block: clamp(64px, 9vw, 112px); }
+.head { display: grid; gap: 16px; max-width: 760px; margin-bottom: clamp(32px, 5vw, 52px); }
+.head h2 { font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: .9; }
+.head p { color: var(--muted); font-size: 1.15rem; max-width: 56ch; }
+
+/* Bandeau d'ouverture */
 .hero { background: var(--orange); color: var(--on-orange); }
-.hero .wrap { padding-block: clamp(40px, 7vw, 88px) clamp(36px, 6vw, 72px); display: grid; gap: clamp(28px, 4vw, 44px); }
-.hero h1 { font-size: clamp(3.6rem, 13vw, 11.5rem); line-height: .84; letter-spacing: -.005em; }
-.hero-foot { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; border-top: 2px solid var(--on-orange); padding-top: 22px; }
-.hero-foot p { font-size: 1.2rem; line-height: 1.5; max-width: 46ch; }
-.hero-foot strong { font-weight: 700; }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
-.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 22px; font: 700 1rem var(--ff-body); text-decoration: none; border: 2px solid #15171c; transition: background-color .2s, color .2s; }
-.btn.solid { background: #15171c; color: #fff; }
-.btn.solid:hover { background: transparent; color: #15171c; }
-.btn.line { color: #15171c; }
-.btn.line:hover { background: #15171c; color: #fff; }
+.hero .label .bars i { background: var(--on-orange); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 40px 56px; align-items: end; padding-block: clamp(44px, 7vw, 92px); }
+.hero-text { display: grid; gap: 26px; }
+.hero h1 { font-size: clamp(3.4rem, 8.4vw, 7.6rem); line-height: .86; }
+@media (max-width: 900px) { .hero h1 { font-size: clamp(3.4rem, 15vw, 7.6rem); } }
+.hero-lead { font-size: 1.2rem; line-height: 1.5; max-width: 50ch; border-top: 2px solid var(--on-orange); padding-top: 20px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .btn { border-color: #15171c; color: #15171c; }
+.hero .btn.solid { background: #15171c; color: #fff; }
+.hero .btn.solid:hover { background: transparent; color: #15171c; }
+.hero .btn.line:hover { background: #15171c; color: #fff; }
 .btn svg { width: 18px; height: 18px; }
-.stats { background: #15171c; color: #f3f4f6; }
-.stats .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.stat { padding: 24px 24px 26px 0; }
-.stat + .stat { border-left: 1px solid #2e323b; padding-left: 24px; }
-.stat .k { font: 500 .8rem var(--ff-body); letter-spacing: .08em; text-transform: uppercase; color: #a3a8b5; }
-.stat .n { font: 900 clamp(2.6rem, 6vw, 4rem)/1 var(--ff-display); font-variant-numeric: tabular-nums; margin-top: 8px; }
-.stat .n small { font: 500 1rem var(--ff-body); color: #a3a8b5; margin-left: 6px; }
-.stat .n .o { color: var(--orange); }
-section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
-.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px 48px; margin-bottom: 40px; align-items: end; }
-.head h2 { font-size: clamp(2.6rem, 6.5vw, 5rem); }
-.head p { color: var(--muted); font-size: 1.1rem; max-width: 54ch; margin-top: 14px; }
-.groupe { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px 48px; border-top: 2px solid var(--ink); padding-block: 22px 8px; }
-.groupe h3 { font-size: 1.9rem; }
-.groupe .g { color: var(--muted); font: 500 .8rem var(--ff-body); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
-.lignes { display: grid; }
-.ligne { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 4px 16px; padding-block: 16px 18px; border-bottom: 1px solid var(--rule); }
-.ligne:last-child { border-bottom: 0; }
-.ligne .no { font: 800 1.9rem/1 var(--ff-display); font-variant-numeric: tabular-nums; color: var(--orange-text); padding-top: 2px; }
-.ligne h4 { font: 700 1.12rem/1.3 var(--ff-body); }
-.ligne p { color: var(--muted); margin-top: 4px; max-width: 62ch; }
-.modele { display: inline-block; margin-top: 10px; font: 700 .72rem/1 var(--ff-body); letter-spacing: .08em; text-transform: uppercase; background: var(--paper-2); padding: 6px 9px; }
-.etapes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
-.etape { padding: 22px 24px 8px 0; display: grid; gap: 10px; align-content: start; }
-.etape + .etape { padding-left: 24px; border-left: 1px solid var(--rule); }
-.etape .n { font: 900 3.4rem/1 var(--ff-display); color: var(--orange-text); }
-.etape h3 { font-size: 2rem; }
-.etape p { color: var(--muted); }
-.positions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 2px solid var(--ink); }
-.pos { padding-block: 18px 20px; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; }
-.pos .t { font: 700 .78rem var(--ff-body); letter-spacing: .1em; text-transform: uppercase; color: var(--orange-text); }
-.pos h4 { font: 700 1.12rem/1.3 var(--ff-body); }
-.pos p { color: var(--muted); }
-.chart { display: grid; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px; }
+.fiche { background: #15171c; color: #f3f4f6; padding: 26px 26px 22px; display: grid; gap: 14px; }
+.fiche-titre { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; color: var(--orange); }
+.fiche dl { margin: 0; display: grid; }
+.fiche dl div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 12px; padding-block: 9px; border-bottom: 1px solid #2e323b; }
+.fiche dt { color: #a3a8b5; font-size: .92rem; }
+.fiche dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.fiche-lien { color: #fff; font-weight: 700; justify-self: start; min-height: 36px; display: inline-flex; align-items: center; }
+.fiche-lien:hover { color: var(--orange); }
+
+/* Le constat : trois chiffres */
+.constat { background: var(--paper); }
+.chiffres { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+.chiffre { padding: 26px 28px 8px 0; display: grid; gap: 10px; align-content: start; }
+.chiffre + .chiffre { padding-left: 28px; border-left: 1px solid var(--rule); }
+.chiffre .big { white-space: nowrap; font: 900 clamp(3rem, 5.2vw, 4.6rem)/.9 var(--ff-display); color: var(--orange-text); text-transform: uppercase; font-variant-numeric: tabular-nums; }
+.chiffre .src, .jour1 .src { color: var(--muted); font-size: .85rem; }
+.punch { margin-top: clamp(36px, 5vw, 56px); font: 900 clamp(2rem, 4.6vw, 3.4rem)/.95 var(--ff-display); text-transform: uppercase; max-width: 22ch; }
+
+/* La méthode : bande encre */
+.methode { background: #15171c; color: #f3f4f6; }
+.methode .head p { color: #a3a8b5; }
+.methode h2 span { color: var(--orange); }
+.etapes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid #f3f4f6; }
+.etapes li { padding: 26px 28px 0 0; display: grid; gap: 12px; align-content: start; }
+.etapes li + li { padding-left: 28px; border-left: 1px solid #2e323b; }
+.etapes .bars { width: 30px; gap: 4px; }
+.etapes .bars i { height: 6px; }
+.etapes h3 { font-size: 2.4rem; }
+.etapes p { color: #a3a8b5; }
+
+/* Mesures phares */
+.phares { background: var(--paper-2); }
+.cartes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--rule); border: 2px solid var(--rule); }
+.carte { background: var(--paper); padding: clamp(24px, 3.5vw, 36px); display: grid; gap: 12px; align-content: start; }
+.carte .no { font: 900 3rem/1 var(--ff-display); color: var(--orange-text); }
+.carte h3 { font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: .95; }
+.carte p { color: var(--muted); }
+.carte a { font-weight: 700; justify-self: start; min-height: 32px; display: inline-flex; align-items: center; }
+.suite { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* Jour 1 */
+.jour1 { background: var(--paper); }
+.chart { display: grid; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px; margin-bottom: 18px; }
 .barrow { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 16px; align-items: center; }
 .barrow .who { font-weight: 700; }
 .track { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .fill { height: 36px; background: var(--ink); flex: none; }
 .barrow.smic .fill { background: var(--orange); }
 .amt { font: 800 1.35rem var(--ff-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.note { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 48px; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--rule); }
-.note .big { font: 900 clamp(2rem, 4vw, 3rem)/.95 var(--ff-display); text-transform: uppercase; }
-.note .big span { color: var(--orange-text); }
-.note p.src { color: var(--muted); font-size: .92rem; }
-.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
-.member { padding: 24px 32px 8px 0; display: grid; gap: 12px; align-content: start; }
-.member + .member { padding-left: 32px; border-left: 1px solid var(--rule); }
-.member .role { font: 700 .78rem var(--ff-body); letter-spacing: .1em; text-transform: uppercase; color: var(--orange-text); }
-.member h3 { font-size: clamp(2.4rem, 5vw, 3.4rem); }
-.join { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 48px; }
-.maires { background: var(--orange); color: var(--on-orange); padding: clamp(24px, 4vw, 40px); display: grid; gap: 14px; align-content: start; }
-.maires h3 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
-.maires p { max-width: 56ch; }
-.socials { border-top: 2px solid var(--ink); }
-.social { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding-block: 18px; border-bottom: 1px solid var(--rule); }
-.social strong { font-weight: 700; }
-.social span { color: var(--muted); }
-@media (max-width: 860px) {
-  .hero-foot, .head, .groupe, .note, .join, footer .wrap { grid-template-columns: minmax(0, 1fr); }
-  .cta { justify-content: flex-start; }
-  .etapes, .team, .positions { grid-template-columns: minmax(0, 1fr); }
-  .etape + .etape, .member + .member { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); }
-  .member { padding-right: 0; }
+
+/* Les comptes : bande orange */
+.comptes { background: var(--orange); color: var(--on-orange); }
+.comptes .bars i { background: var(--on-orange); }
+.comptes-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px 56px; align-items: end; }
+.comptes-grid > div { display: grid; gap: 18px; justify-items: start; }
+.comptes h2 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: .9; }
+.comptes p { font-size: 1.15rem; max-width: 46ch; }
+.comptes .btn { border-color: #15171c; background: #15171c; color: #fff; }
+.comptes .btn:hover { background: transparent; color: #15171c; }
+.mini { margin: 0; display: grid; border-top: 2px solid #15171c; }
+.mini div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-block: 14px; border-bottom: 1px solid rgba(21, 23, 28, .35); }
+.mini dt { font-weight: 700; }
+.mini dd { margin: 0; font: 900 2.6rem/1 var(--ff-display); font-variant-numeric: tabular-nums; }
+.mini small { font: 500 1rem var(--ff-body); }
+
+/* Agir */
+.agir { background: var(--paper); }
+.actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+.action { padding: 26px 28px 0 0; display: grid; gap: 12px; align-content: start; }
+.action + .action { padding-left: 28px; border-left: 1px solid var(--rule); }
+.action .no { font: 900 3rem/1 var(--ff-display); color: var(--orange-text); }
+.action h3 { font-size: 2rem; line-height: .95; }
+.action p { color: var(--muted); }
+.action a { font-weight: 700; justify-self: start; min-height: 32px; display: inline-flex; align-items: center; }
+
+@media (max-width: 900px) {
+  .hero-grid, .comptes-grid { grid-template-columns: minmax(0, 1fr); }
+  .chiffres, .etapes, .actions { grid-template-columns: minmax(0, 1fr); }
+  .chiffre + .chiffre, .etapes li + li, .action + .action { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .etapes li + li { border-top-color: #2e323b; }
+  .chiffre, .etapes li, .action { padding-right: 0; padding-bottom: 22px; }
+  .cartes { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
-  .stats .wrap { grid-template-columns: minmax(0, 1fr); }
-  .stat, .stat + .stat { padding: 16px 0; border-left: 0; }
-  .stat + .stat { border-top: 1px solid #2e323b; }
   .barrow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .fill { height: 26px; }
 }
@@ -193,218 +213,135 @@ section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="top"><div class="wrap">
   <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
-  <nav aria-label="Navigation principale"><a href="index.html" aria-current=page>Accueil</a><a href="programme.html">Programme</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
+  <nav aria-label="Navigation principale"><a href="programme.html">Programme</a><a href="viktor.html">Viktor</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
 </div></header>
 <main id="contenu">
 
 <section class="hero">
-    <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
       <span class="label">Présidentielle 2027 · candidature citoyenne</span>
       <h1>Rendez-nous<br>des comptes.</h1>
-      <div class="hero-foot">
-        <p><strong>Viktor Venet</strong>, 20 ans, étudiant en alternance à Saint-Étienne, candidat sans parti à l'élection présidentielle. Pas d'argent, pas d'appareil, une IA comme directeur de campagne. Une exigence : des services publics qui répondent, un pouvoir qui montre ses dossiers, et des décisions qui partent du terrain.</p>
-        <div class="cta">
-          <a class="btn solid" href="#programme">Lire les 16 mesures
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn line" href="programme.html">Le programme expliqué</a>
-        </div>
+      <p class="hero-lead">J'ai 20 ans, je suis étudiant en alternance à Saint-Étienne, et je suis candidat à l'élection présidentielle. Sans parti, sans argent, avec une IA comme directeur de campagne. Ce que je demande : un État qui montre ce qu'il fait, et des décisions qui partent du terrain.</p>
+      <div class="cta">
+        <a class="btn solid" href="programme.html">Lire le programme
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn line" href="quiz.html">Faire le quiz</a>
       </div>
     </div>
-  </section>
+    <aside class="fiche" aria-label="Fiche du candidat">
+      <p class="fiche-titre">Fiche candidat</p>
+      <dl>
+        <div><dt>Nom</dt><dd>Viktor Venet</dd></div>
+        <div><dt>Âge</dt><dd>20 ans</dd></div>
+        <div><dt>Ville</dt><dd>Saint-Étienne</dd></div>
+        <div><dt>Parti</dt><dd>Aucun</dd></div>
+        <div><dt>Budget</dt><dd>0 €</dd></div>
+        <div><dt>Équipe</dt><dd>1 humain + 1 IA</dd></div>
+        <div><dt>1er tour</dt><dd>18 avril 2027 · <span id="jours">185</span> jours</dd></div>
+      </dl>
+      <a class="fiche-lien" href="viktor.html">Qui est Viktor ?</a>
+    </aside>
+  </div>
+</section>
 
-  <div class="stats" role="list" aria-label="La campagne en chiffres">
-    <div class="wrap">
-      <div class="stat" role="listitem"><p class="k">Avant le 1er tour · 18 avril 2027</p><p class="n"><span id="jours">185</span><small>jours</small></p></div>
-      <div class="stat" role="listitem"><p class="k">Parrainages d'élus</p><p class="n"><span class="o">0</span><small>/ 500</small></p></div>
-      <div class="stat" role="listitem"><p class="k">Budget de campagne · <a href="comptes.html" style="color:inherit">voir les comptes</a></p><p class="n">0<small>€</small></p></div>
+<section class="band constat" aria-labelledby="t-constat">
+  <div class="wrap">
+    <div class="head">
+      <span class="label"><span class="bars" aria-hidden="true"><i></i></span>Le constat</span>
+      <h2 id="t-constat">L'État ne rend pas de comptes.</h2>
+      <p>On ne sait pas où en est son dossier, ce que décide un ministère, ni si son député était là. Et ce sont les gens honnêtes qui abandonnent.</p>
+    </div>
+    <div class="chiffres">
+      <div class="chiffre"><p class="big">1 sur 3</p><p>des foyers qui ont droit au RSA ne le demandent pas. Pour la prime d'activité, c'est un sur deux.</p><p class="src">Source : DREES</p></div>
+      <div class="chiffre"><p class="big">165 011</p><p>réclamations et demandes reçues par le Défenseur des droits en 2025, soit 17 % de plus en un an.</p><p class="src">Source : Défenseur des droits</p></div>
+      <div class="chiffre"><p class="big">66 jours</p><p>pour obtenir l'avis de la commission d'accès aux documents administratifs, alors que la loi en prévoit 30.</p><p class="src">Source : Sénat, 2025</p></div>
+    </div>
+    <p class="punch">On ne peut pas juger ce qu'on ne voit pas.</p>
+  </div>
+</section>
+
+<section class="band methode" aria-labelledby="t-methode">
+  <div class="wrap">
+    <div class="head">
+      <span class="label"><span class="bars" aria-hidden="true"><i></i><i></i></span>La méthode</span>
+      <h2 id="t-methode">Je fixe le cap.<br><span>Le terrain trace la route.</span></h2>
+      <p>Je ne prétends pas tout savoir. Aucune réforme n'est décidée depuis un bureau : elle part du terrain et suit toujours le même chemin.</p>
+    </div>
+    <ol class="etapes">
+      <li><span class="bars" aria-hidden="true"><i></i></span><h3>Repérer</h3><p>On va voir ce qui se passe sur le terrain, et ce qui marche déjà ailleurs, en France ou à l'étranger.</p></li>
+      <li><span class="bars" aria-hidden="true"><i></i><i></i></span><h3>Tester</h3><p>On essaie avec des villes, des écoles ou des entreprises volontaires, et on publie les résultats.</p></li>
+      <li><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><h3>Généraliser</h3><p>Si ça marche, toute la France en profite. Sinon, on abandonne sans ego, et on explique pourquoi.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band phares" aria-labelledby="t-phares">
+  <div class="wrap">
+    <div class="head">
+      <span class="label"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Le programme</span>
+      <h2 id="t-phares">4 mesures pour commencer.</h2>
+      <p>Il y en a 16 en tout, chacune expliquée avec ses chiffres, ses objections et ses sources.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte"><span class="no">01</span><h3>Ton dossier suivi comme un colis</h3><p>CAF, CPAM, préfecture : où en est ton dossier, qui le traite, quand il sera fini. En ligne, en temps réel.</p><a href="programme.html#mesure-1-ton-dossier-suivi-comme-un-colis">Lire l'explication</a></article>
+      <article class="carte"><span class="no">13</span><h3>Les dossiers des ministres en accès libre</h3><p>Notes, études, agendas publiés d'office. Plus besoin d'être journaliste pour savoir ce que décide un ministère.</p><a href="programme.html#mesure-13-les-dossiers-des-ministres-en-acces-libre">Lire l'explication</a></article>
+      <article class="carte"><span class="no">14</span><h3>Chaque élu écoutable en direct</h3><p>Un micro par député, diffusé en direct, et une présence publiée. S'il n'est pas là, tu le sais.</p><a href="programme.html#mesure-14-chaque-elu-ecoutable-en-direct-et-sa-presence-publ">Lire l'explication</a></article>
+      <article class="carte"><span class="no">10</span><h3>La semaine de 4 jours, 32 heures</h3><p>Sans baisse de salaire, testée d'abord chez les volontaires. Au Royaume-Uni, 56 entreprises sur 61 l'ont gardée.</p><a href="programme.html#mesure-10-la-semaine-de-4-jours-32-heures">Lire l'explication</a></article>
+    </div>
+    <div class="suite">
+      <a class="btn solid" href="programme.html#partie-3-les-16-mesures">Voir les 16 mesures</a>
+      <a class="btn line" href="programme.html#partie-4-mes-positions-sur-les-grands-sujets">Mes positions sur les grands sujets</a>
     </div>
   </div>
+</section>
 
-  <section class="sec" id="programme">
-    <div class="wrap">
-      <div class="head">
-        <span class="label"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>Le programme</span>
-        <div>
-          <h2>16 mesures de bon sens</h2>
-          <p>Des choses simples, rapides à tester, et souvent déjà en place quelque part. Chaque mesure est expliquée en détail, avec les chiffres, les objections et les sources, dans <a href="programme.html" style="color:var(--orange-text);font-weight:700">le programme complet</a>.</p>
-        </div>
-      </div>
-
-      <div class="groupe">
-        <div><p class="g">Bloc A</p><h3>Des services publics qui répondent</h3></div>
-        <div class="lignes">
-          <article class="ligne"><span class="no">01</span><div><h4>Ton dossier suivi comme un colis</h4><p>CAF, CPAM, France Travail, préfectures : où en est ton dossier, qui le traite, quand il sera fini. En ligne, en temps réel.</p><a class="more" href="programme.html#mesure-1-ton-dossier-suivi-comme-un-colis">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">02</span><div><h4>Les délais réels publiés chaque mois</h4><p>Chaque organisme affiche ses vrais délais, département par département.</p><a class="more" href="programme.html#mesure-2-les-delais-reels-publies-chaque-mois">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">03</span><div><h4>Le droit à un humain</h4><p>Un numéro joignable, ou un rappel garanti sous 48 h par quelqu'un qui a ton dossier sous les yeux.</p><a class="more" href="programme.html#mesure-3-le-droit-a-un-humain">Lire l'explication complète</a></div></article>
-        </div>
-      </div>
-
-      <div class="groupe">
-        <div><p class="g">Bloc B</p><h3>Le terrain aux commandes</h3></div>
-        <div class="lignes">
-          <article class="ligne"><span class="no">04</span><div><h4>Des ministres qui connaissent le métier</h4><p>Une ancienne enseignante à l'Éducation, un soignant à la Santé, un agriculteur à l'Agriculture.</p><a class="more" href="programme.html#mesure-4-des-ministres-qui-connaissent-le-metier">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">05</span><div><h4>Une audition publique avant chaque nomination</h4><p>Chaque futur ministre s'explique en direct devant des professionnels de son secteur.</p><a class="more" href="programme.html#mesure-5-une-audition-publique-avant-chaque-nomination">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">06</span><div><h4>Des conseils de praticiens</h4><p>Des professionnels tirés au sort rendent un avis public avant chaque grande réforme.</p><a class="more" href="programme.html#mesure-6-des-conseils-de-praticiens">Lire l'explication complète</a></div></article>
-        </div>
-      </div>
-
-      <div class="groupe">
-        <div><p class="g">Bloc C</p><h3>S'inspirer de ce qui marche ailleurs</h3></div>
-        <div class="lignes">
-          <article class="ligne"><span class="no">07</span><div><h4>Une cellule « ça marche ailleurs »</h4><p>Chaque mois, une mesure étrangère qui a fait ses preuves, proposée pour la France.</p><a class="more" href="programme.html#mesure-7-une-cellule-ca-marche-ailleurs">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">08</span><div><h4>Des journées d'école moins longues</h4><p>Nos élèves ont plus d'heures de cours que la moyenne de l'OCDE, tassées sur moins de semaines. On étale l'année pour alléger les journées.</p><span class="modele">Modèle : Allemagne</span><a class="more" href="programme.html#mesure-8-des-journees-d-ecole-moins-longues">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">09</span><div><h4>Des classes plus petites</h4><p>Une norme nationale : au maximum 15 élèves par enseignant en début de primaire, 20 ensuite.</p><span class="modele">Modèle : Norvège</span><a class="more" href="programme.html#mesure-9-des-classes-plus-petites">Lire l'explication complète</a></div></article>
-        </div>
-      </div>
-
-      <div class="groupe">
-        <div><p class="g">Bloc D</p><h3>Travailler mieux, pas plus longtemps</h3></div>
-        <div class="lignes">
-          <article class="ligne"><span class="no">10</span><div><h4>La semaine de 4 jours, 32 heures</h4><p>Sans baisse de salaire. D'abord par accords d'entreprise volontaires, puis on généralise ce qui marche.</p><span class="modele">Modèle : Islande</span><a class="more" href="programme.html#mesure-10-la-semaine-de-4-jours-32-heures">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">11</span><div><h4>Juger le travail au résultat</h4><p>Là où c'est possible, on évalue les objectifs atteints, pas les heures passées assis. Salaire et protections inchangés.</p><a class="more" href="programme.html#mesure-11-juger-le-travail-au-resultat">Lire l'explication complète</a></div></article>
-        </div>
-      </div>
-
-      <div class="groupe">
-        <div><p class="g">Bloc E</p><h3>Un pouvoir qui rend des comptes</h3></div>
-        <div class="lignes">
-          <article class="ligne"><span class="no">12</span><div><h4>Jour 1 : je commence par moi</h4><p>Un décret le premier jour pour baisser le salaire du président et des ministres. Un audit public des avantages au sommet de l'État. Un projet de loi pour les indemnités des parlementaires.</p><a class="more" href="programme.html#mesure-12-jour-1-je-commence-par-moi">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">13</span><div><h4>Les dossiers des ministres en accès libre</h4><p>Notes, études, agendas : publiés par défaut et consultables par tous, sans demande ni recours.</p><span class="modele">Modèle : Suède</span><a class="more" href="programme.html#mesure-13-les-dossiers-des-ministres-en-acces-libre">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">14</span><div><h4>Chaque élu écoutable en direct</h4><p>Un poste avec micro pour chaque député et sénateur, diffusé en direct. La présence est publiée, et une absence devient un choix visible.</p><a class="more" href="programme.html#mesure-14-chaque-elu-ecoutable-en-direct-et-sa-presence-publ">Lire l'explication complète</a></div></article>
-        </div>
-      </div>
-
-      <div class="groupe">
-        <div><p class="g">Bloc F</p><h3>Fiers de ce qui marche</h3></div>
-        <div class="lignes">
-          <article class="ligne"><span class="no">15</span><div><h4>Des villes qui vivent aussi la nuit</h4><p>Commerces ouverts en soirée et la nuit dans les villes volontaires, avec des salariés volontaires et un salaire majoré. Un maire de la nuit et des transports nocturnes testés en même temps.</p><span class="modele">Modèle : Amsterdam</span><a class="more" href="programme.html#mesure-15-des-villes-qui-vivent-aussi-la-nuit">Lire l'explication complète</a></div></article>
-          <article class="ligne"><span class="no">16</span><div><h4>Le nucléaire, une fierté française</h4><p>Environ 68 % de notre électricité en 2025 et un record d'exportations. On prolonge le parc, on construit, on forme en alternance, et le coût de chaque chantier est publié chaque mois.</p><a class="more" href="programme.html#mesure-16-le-nucleaire-une-fierte-francaise">Lire l'explication complète</a></div></article>
-        </div>
-      </div>
+<section class="band jour1" aria-labelledby="t-jour1">
+  <div class="wrap">
+    <div class="head">
+      <span class="label"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Jour 1</span>
+      <h2 id="t-jour1">Je commence par moi.</h2>
+      <p>Le salaire du président et des ministres est fixé par décret. Le premier jour, je le baisse. Les profs, soignants et agents de terrain ne sont pas concernés.</p>
     </div>
-  </section>
-
-  <section class="sec" id="methode">
-    <div class="wrap">
-      <div class="head">
-        <span class="label"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>La méthode</span>
-        <div>
-          <h2>Repérer. Tester. Généraliser.</h2>
-          <p>On ne décide pas depuis un bureau. Chaque idée suit le même chemin, dans cet ordre.</p>
-        </div>
-      </div>
-      <div class="etapes">
-        <div class="etape"><span class="n">1</span><h3>Repérer</h3><p>On va sur le terrain et on regarde ce qui fonctionne, en France comme ailleurs, chiffres à l'appui.</p></div>
-        <div class="etape"><span class="n">2</span><h3>Tester</h3><p>On l'essaie dans quelques villes, écoles ou entreprises volontaires, puis on publie les résultats.</p></div>
-        <div class="etape"><span class="n">3</span><h3>Généraliser</h3><p>Si ça marche, on l'étend à toute la France. Sinon, on l'abandonne sans ego.</p></div>
-      </div>
+    <div class="chart" role="img" aria-label="Rémunérations brutes mensuelles : président et Premier ministre 16 039 euros, ministre 10 692 euros, député ou sénateur 7 637 euros, SMIC 1 823 euros.">
+      <div class="barrow"><span class="who">Président · Premier ministre</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * 1)"></span><span class="amt">16 039 €</span></div></div>
+      <div class="barrow"><span class="who">Ministre</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * .6666)"></span><span class="amt">10 692 €</span></div></div>
+      <div class="barrow"><span class="who">Député · sénateur</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * .4762)"></span><span class="amt">7 637 €</span></div></div>
+      <div class="barrow smic"><span class="who">SMIC temps plein</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * .1137)"></span><span class="amt">1 823 €</span></div></div>
     </div>
-  </section>
+    <p class="src">Rémunérations brutes mensuelles, hors frais. Sources : décret n° 2012-983, Sénat (au 1er janvier 2024), SMIC au 1er janvier 2026.</p>
+  </div>
+</section>
 
-  <section class="sec" id="positions">
-    <div class="wrap">
-      <div class="head">
-        <span class="label"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>Les positions</span>
-        <div>
-          <h2>Je fixe le cap. Le terrain trace la route.</h2>
-          <p>Je ne prétends pas tout savoir. Sur chaque grand sujet, je donne une direction claire. Les détails seront fixés avec ceux qui font le métier, puis testés.</p>
-        </div>
-      </div>
-      <div class="positions">
-        <div class="pos"><span class="t">Immigration</span><h4>Appliquer les règles, intégrer par le travail</h4><p>Les vrais chiffres publiés, des procédures rapides, la langue et le travail dès l'arrivée.</p></div>
-        <div class="pos"><span class="t">Sécurité et justice</span><h4>Des sanctions rapides et certaines</h4><p>Plutôt que des peines plus lourdes. La réinsertion contre la récidive. Des caméras-piétons et des statistiques publiées.</p></div>
-        <div class="pos"><span class="t">Europe</span><h4>Plus d'Europe là où elle marche</h4><p>Énergie, défense, recherche. Moins de normes inutiles. Les votes de la France au Conseil européen rendus publics.</p></div>
-        <div class="pos"><span class="t">Impôts</span><h4>Dépenser mieux avant de toucher aux taux</h4><p>Chaque euro public traçable en ligne, et la lutte contre la fraude en priorité.</p></div>
-        <div class="pos"><span class="t">Retraites</span><h4>Pas de chamboulement, plus de liberté</h4><p>Des comptes publiés, la pénibilité prise en compte, un âge de départ plus libre.</p></div>
-        <div class="pos"><span class="t">Démocratie</span><h4>Un référendum d'initiative citoyenne encadré</h4><p>Un seuil de signatures élevé, comme en Suisse, et un test d'abord au niveau local.</p></div>
-        <div class="pos"><span class="t">Défense</span><h4>Aux côtés de l'Ukraine</h4><p>Une défense européenne commune, et une industrie de défense française qui forme et embauche.</p></div>
-        <div class="pos"><span class="t">Énergie</span><h4>Pro-nucléaire, renouvelables en complément</h4><p>Une électricité décarbonée, produite en France, à la demande.</p></div>
-      </div>
+<section class="band comptes" aria-labelledby="t-comptes">
+  <div class="wrap comptes-grid">
+    <div>
+      <span class="label"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Transparence</span>
+      <h2 id="t-comptes">Je publie mes comptes. Même quand c'est zéro.</h2>
+      <p>Chaque euro, chaque maire contacté, chaque refus. Si je demande à l'État de rendre des comptes, je commence par les miens.</p>
+      <a class="btn solid" href="comptes.html">Voir les comptes de la campagne</a>
     </div>
-  </section>
+    <dl class="mini">
+      <div><dt>Argent reçu</dt><dd>0 €</dd></div>
+      <div><dt>Argent dépensé</dt><dd>0 €</dd></div>
+      <div><dt>Parrainages</dt><dd>0 <small>/ 500</small></dd></div>
+    </dl>
+  </div>
+</section>
 
-  <section class="sec" id="quiz">
-    <div class="wrap">
-      <div class="maires" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 40px;align-items:end">
-        <div style="display:grid;gap:12px"><span class="label">Le quiz · 2 minutes</span><h3>Êtes-vous d'accord avec moi ?</h3><p>Douze affirmations tirées du programme. Votre score, et les arguments derrière chaque mesure. Aucune réponse enregistrée.</p></div>
-        <a class="btn solid" href="quiz.html">Faire le quiz</a>
-      </div>
+<section class="band agir" id="rejoindre" aria-labelledby="t-agir">
+  <div class="wrap">
+    <div class="head">
+      <span class="label"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>Agir</span>
+      <h2 id="t-agir">Trois façons d'aider.</h2>
     </div>
-  </section>
-
-  <section class="sec" id="jour1">
-    <div class="wrap">
-      <div class="head">
-        <span class="label"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>Jour 1</span>
-        <div>
-          <h2>Combien gagne le sommet de l'État ?</h2>
-          <p>Rémunérations brutes mensuelles, hors frais et avantages. Les profs, soignants et agents de terrain ne sont pas concernés par la baisse.</p>
-        </div>
-      </div>
-      <div class="chart" role="img" aria-label="Président et Premier ministre : 16 039 euros. Ministre : 10 692 euros. Député ou sénateur : 7 637 euros. SMIC : 1 823 euros brut par mois.">
-        <div class="barrow"><span class="who">Président · Premier ministre</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * 1)"></span><span class="amt">16 039 €</span></div></div>
-        <div class="barrow"><span class="who">Ministre</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * .6666)"></span><span class="amt">10 692 €</span></div></div>
-        <div class="barrow"><span class="who">Député · sénateur</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * .4762)"></span><span class="amt">7 637 €</span></div></div>
-        <div class="barrow smic"><span class="who">SMIC temps plein</span><div class="track"><span class="fill" style="width:calc((100% - 7.5rem) * .1137)"></span><span class="amt">1 823 €</span></div></div>
-      </div>
-      <div class="note">
-        <p class="big">Le jour 1, je baisse le mien. <span>Par décret.</span></p>
-        <p class="src">Le salaire du président et des ministres est fixé par décret (n° 2012-983) : il peut être baissé dès le premier jour. Pour les parlementaires, il faut une loi organique votée par le Parlement. Sources : décret n° 2012-983, Sénat (indemnité au 1er janvier 2024, hors frais de mandat), SMIC au 1er janvier 2026 (info.gouv.fr).</p>
-      </div>
+    <div class="actions">
+      <div class="action"><span class="no">1</span><h3>Faites le quiz</h3><p>Douze affirmations, deux minutes. Découvrez si vous êtes d'accord, et partagez votre score.</p><a href="quiz.html">Faire le quiz</a></div>
+      <div class="action"><span class="no">2</span><h3>Suivez la campagne</h3><p>Les appels aux maires, les refus, les galères : tout est filmé. Comptes <strong>@venet2027</strong> sur TikTok, Instagram et YouTube, bientôt en ligne.</p></div>
+      <div class="action maire"><span class="no">3</span><h3>Vous êtes élu ? Parrainez.</h3><p>Il faut 500 signatures d'élus pour être sur le bulletin. Parrainer ne veut pas dire soutenir : c'est permettre à un citoyen de se présenter.</p><a href="presse.html#contact">Me contacter</a></div>
     </div>
-  </section>
-
-  <section class="sec" id="equipe">
-    <div class="wrap">
-      <div class="head">
-        <span class="label"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>L'équipe</span>
-        <div>
-          <h2>Toute l'équipe tient sur une ligne</h2>
-          <p>Les autres candidats ont des conseillers payés par des partis. Ici, tout est sur la table.</p>
-        </div>
-      </div>
-      <div class="team">
-        <div class="member">
-          <span class="role">Le candidat</span>
-          <h3>Viktor Venet</h3>
-          <p>20 ans, étudiant en alternance à Saint-Étienne. Il en a marre d'attendre la CAF, de voir des ministres qui n'ont jamais travaillé dans leur domaine, et des réformes décidées loin du terrain.</p>
-          <p>Il décide, valide chaque idée et publie lui-même chaque contenu.</p>
-        </div>
-        <div class="member">
-          <span class="role">Le directeur de campagne</span>
-          <h3>Une IA</h3>
-          <p>Elle prépare les textes, vérifie et source les chiffres, organise le planning.</p>
-          <p>Elle ne décide de rien et ne publie rien seule. Chaque contenu préparé avec elle est signalé.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="rejoindre">
-    <div class="wrap">
-      <div class="head">
-        <span class="label"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>Rejoindre</span>
-        <div>
-          <h2>Suivre la campagne en direct</h2>
-          <p>Les appels aux maires, les refus, les galères, les petites victoires : tout est filmé.</p>
-        </div>
-      </div>
-      <div class="join">
-        <div class="maires">
-          <span class="label">Élus</span>
-          <h3>Vous êtes maire ? Parrainez.</h3>
-          <p>Pour être sur le bulletin, il faut 500 parrainages d'élus venant d'au moins 30 départements. Parrainer ne veut pas dire soutenir : c'est permettre à un citoyen de se présenter.</p>
-        </div>
-        <div class="socials">
-          <div class="social"><strong>TikTok</strong><span>@venet2027 · bientôt</span></div>
-          <div class="social"><strong>Instagram</strong><span>@venet2027 · bientôt</span></div>
-          <div class="social"><strong>YouTube</strong><span>@venet2027 · bientôt</span></div>
-          <div class="social"><strong>Contact</strong><span>adresse à venir</span></div>
-          <div class="social"><strong>Journalistes</strong><span><a href="presse.html" style="color:inherit">Espace presse</a></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 <footer><div class="wrap">
@@ -414,6 +351,7 @@ section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
   </div>
   <ul class="liens">
     <li><a href="programme.html">Le programme complet</a></li>
+    <li><a href="viktor.html">Qui est Viktor ?</a></li>
     <li><a href="quiz.html">Le quiz</a></li>
     <li><a href="comptes.html">Les comptes de la campagne</a></li>
     <li><a href="presse.html">Espace presse</a></li>
@@ -424,6 +362,13 @@ section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
     <p>Aucun cookie, aucun traceur, aucune donnée collectée. Aucun don accepté pour le moment.</p>
   </div>
 </div></footer>
-
+<script>
+(function () {
+  var el = document.getElementById('jours'); if (!el) return;
+  var auj = new Date(); auj.setHours(0, 0, 0, 0);
+  var j = Math.round((new Date(2027, 3, 18) - auj) / 86400000);
+  if (j >= 0) el.textContent = j;
+})();
+</script>
 </body>
 </html>

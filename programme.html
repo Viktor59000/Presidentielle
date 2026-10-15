@@ -127,19 +127,35 @@ article.doc { max-width: 68ch; min-width: 0; }
   .layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 32px; }
   .toc { position: static; }
 }
+
+.apercu { background: var(--paper-2); padding-block: 40px 44px; }
+.apercu h2 { font: 900 clamp(1.8rem, 4vw, 2.6rem)/1 var(--ff-display); text-transform: uppercase; margin: 0 0 20px; }
+.grille { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; background: var(--rule); border: 2px solid var(--rule); }
+.grille a { display: grid; gap: 6px; height: 100%; padding: 16px 16px 18px; background: var(--paper); color: var(--ink); text-decoration: none; font-weight: 700; line-height: 1.3; }
+.grille a:hover { background: var(--ink); color: var(--paper); }
+.grille span { font: 900 1.7rem/1 var(--ff-display); color: var(--orange-text); }
+.chiffre-cle { margin: 28px 0; padding: 22px 0 20px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 24px; align-items: center; }
+.chiffre-cle .big { font: 900 clamp(2.8rem, 6vw, 4rem)/.9 var(--ff-display); color: var(--orange-text); text-transform: uppercase; margin: 0; white-space: nowrap; }
+.chiffre-cle p { margin: 0; }
+@media (max-width: 900px) { .grille { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .chiffre-cle { grid-template-columns: minmax(0, 1fr); } .chiffre-cle .big { white-space: normal; } }
 </style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="top"><div class="wrap">
   <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
-  <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="programme.html" aria-current=page>Programme</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
+  <nav aria-label="Navigation principale"><a href="programme.html" aria-current=page>Programme</a><a href="viktor.html">Viktor</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
 </div></header>
 <main id="contenu">
 <section class="cover"><div class="wrap">
   <span class="k">Le programme complet · version 1, octobre 2026</span>
   <h1>Rendez-nous<br>des comptes.</h1>
   <p>Le constat, la méthode, les 16 mesures et mes positions, expliqués en détail. Avec les chiffres, les sources, les objections et ce qui pourrait mal tourner.</p>
+</div></section>
+<section class="apercu"><div class="wrap">
+  <h2>Les 16 mesures en un coup d'œil</h2>
+  <ol class="grille"><li><a href="#mesure-1-ton-dossier-suivi-comme-un-colis"><span>01</span>Ton dossier suivi comme un colis</a></li><li><a href="#mesure-2-les-delais-reels-publies-chaque-mois"><span>02</span>Les délais réels publiés chaque mois</a></li><li><a href="#mesure-3-le-droit-a-un-humain"><span>03</span>Le droit à un humain</a></li><li><a href="#mesure-4-des-ministres-qui-connaissent-le-metier"><span>04</span>Des ministres qui connaissent le métier</a></li><li><a href="#mesure-5-une-audition-publique-avant-chaque-nomination"><span>05</span>Une audition publique avant chaque nomination</a></li><li><a href="#mesure-6-des-conseils-de-praticiens"><span>06</span>Des conseils de praticiens</a></li><li><a href="#mesure-7-une-cellule-ca-marche-ailleurs"><span>07</span>Une cellule « ça marche ailleurs »</a></li><li><a href="#mesure-8-des-journees-d-ecole-moins-longues"><span>08</span>Des journées d'école moins longues</a></li><li><a href="#mesure-9-des-classes-plus-petites"><span>09</span>Des classes plus petites</a></li><li><a href="#mesure-10-la-semaine-de-4-jours-32-heures"><span>10</span>La semaine de 4 jours, 32 heures</a></li><li><a href="#mesure-11-juger-le-travail-au-resultat"><span>11</span>Juger le travail au résultat</a></li><li><a href="#mesure-12-jour-1-je-commence-par-moi"><span>12</span>Jour 1 : je commence par moi</a></li><li><a href="#mesure-13-les-dossiers-des-ministres-en-acces-libre"><span>13</span>Les dossiers des ministres en accès libre</a></li><li><a href="#mesure-14-chaque-elu-ecoutable-en-direct-et-sa-presence-publ"><span>14</span>Chaque élu écoutable en direct, et sa présence publique</a></li><li><a href="#mesure-15-des-villes-qui-vivent-aussi-la-nuit"><span>15</span>Des villes qui vivent aussi la nuit</a></li><li><a href="#mesure-16-le-nucleaire-une-fierte-francaise"><span>16</span>Le nucléaire, une fierté française</a></li></ol>
 </div></section>
 <div class="wrap layout">
   <nav class="toc" aria-label="Sommaire"><p>Sommaire</p><ol><li><a href="#partie-1-le-constat"><span>Partie 1</span>Le constat</a></li><li><a href="#partie-2-la-methode"><span>Partie 2</span>La méthode</a></li><li><a href="#partie-3-les-16-mesures"><span>Partie 3</span>Les 16 mesures</a></li><li><a href="#partie-4-mes-positions-sur-les-grands-sujets"><span>Partie 4</span>Mes positions sur les grands sujets</a></li><li><a href="#partie-5-ce-que-je-ne-promets-pas-et-le-calendrier"><span>Partie 5</span>Ce que je ne promets pas, et le calendrier</a></li></ol></nav>
@@ -158,8 +174,10 @@ article.doc { max-width: 68ch; min-width: 0; }
 <p>Aujourd'hui, un citoyen ne voit presque rien de ce que fait l'État pour lui, ou à cause de lui.</p>
 <p>Quand vous déposez un dossier à la CAF, à la CPAM ou en préfecture, il disparaît. Vous ne savez pas qui le traite, où il en est, ni quand vous aurez une réponse. Vous relancez, vous attendez au téléphone, on vous demande des pièces que vous avez déjà envoyées.</p>
 <p>Ce n'est pas une impression. En 2025, le Défenseur des droits a reçu plus de 165 000 réclamations et demandes, 17 % de plus qu'en 2024. Les saisines liées aux relations avec les services publics ont augmenté de 20 % en un an, et l'institution pointe une dématérialisation qui laisse des gens sur le bord du chemin. Selon le Credoc, un tiers de la population est éloignée du numérique.</p>
+<aside class="chiffre-cle"><p class="big">1 sur 3</p><p>des foyers qui ont droit au RSA ne le demandent pas. Pour la prime d'activité, c'est environ un sur deux (DREES).</p></aside>
 <p>Les conséquences sont concrètes. D'après la DREES, environ un tiers des foyers qui ont droit au RSA ne le demandent pas, et pour la prime d'activité c'est environ un foyer éligible sur deux. Quand l'administration est opaque, ce ne sont pas les fraudeurs qui en souffrent : ce sont les gens honnêtes qui abandonnent.</p>
 <p>Le même brouillard entoure le pouvoir. Pour obtenir un document d'un ministère, il faut le demander, attendre, puis souvent saisir la Commission d'accès aux documents administratifs (CADA). Celle-ci a reçu plus de 10 000 saisines en 2023, et elle met en moyenne entre 50 et 66 jours à répondre, alors que la loi lui en donne 30. En pratique, seuls les journalistes et les plus tenaces vont au bout.</p>
+<aside class="chiffre-cle"><p class="big">66 jours</p><p>en moyenne pour obtenir l'avis de la CADA sur un document refusé, alors que la loi prévoit un mois.</p></aside>
 <p><strong>On ne peut pas juger ce qu'on ne voit pas.</strong> C'est le premier problème.</p>
 <h3 id="2-elle-manque-de-terrain">2. Elle manque de terrain</h3>
 <p>En France, les réformes descendent d'en haut. Elles sont pensées dans des bureaux parisiens, par des gens souvent brillants, mais qui n'ont pas vécu le problème qu'ils veulent régler. Puis elles sont imposées à tout le pays d'un coup.</p>
@@ -260,6 +278,7 @@ article.doc { max-width: 68ch; min-width: 0; }
 <h3 id="bloc-d-travailler-mieux-pas-plus-longtemps">Bloc D · Travailler mieux, pas plus longtemps</h3>
 <h4 id="mesure-10-la-semaine-de-4-jours-32-heures">Mesure 10 · La semaine de 4 jours, 32 heures</h4>
 <p><strong>Le constat.</strong> On mesure encore trop souvent le travail en heures de présence. Pourtant, les expériences de réduction du temps de travail montrent qu'on peut produire autant, voire mieux, en moins de temps, avec des salariés en meilleure santé.</p>
+<aside class="chiffre-cle"><p class="big">56 sur 61</p><p>entreprises britanniques ont gardé la semaine de quatre jours après six mois d'essai, en 2022.</p></aside>
 <p><strong>Ce qui a déjà été testé.</strong></p>
 <ul><li>En Islande, entre 2015 et 2019, 2 500 salariés sont passés de 40 heures à 35 ou 36 heures par semaine sans baisse de salaire. La productivité a été maintenue ou améliorée dans la plupart des cas, et le bien-être a nettement progressé. Aujourd'hui, environ 86 % des salariés islandais travaillent moins ou en ont le droit.</li><li>Au Royaume-Uni, en 2022, 61 entreprises ont testé pendant six mois la semaine de quatre jours sans baisse de salaire. 56 l'ont gardée, 18 de façon permanente. Les arrêts maladie ont baissé de 65 % et les départs de salariés de 57 %.</li></ul>
 <p><strong>Ce que je propose.</strong> Passer progressivement de 35 heures sur 5 jours à 32 heures sur 4 jours, sans baisse de salaire.</p>
@@ -306,6 +325,7 @@ article.doc { max-width: 68ch; min-width: 0; }
 <p><strong>Ce que je propose.</strong></p>
 <ul><li>Prolonger les réacteurs existants tant que l'autorité de sûreté le juge possible.</li><li>Construire de nouveaux réacteurs.</li><li>Former massivement soudeurs, techniciens et ingénieurs, en particulier par l'alternance.</li><li>Développer les renouvelables <strong>en complément</strong> du nucléaire, pas à sa place.</li></ul>
 <p><strong>Pourquoi le nucléaire.</strong> Il produit beaucoup, à la demande, quelle que soit la météo, et presque sans émettre de CO₂. Il nous rend moins dépendants des importations de gaz et de pétrole. Et c'est un savoir-faire que nous pouvons exporter.</p>
+<aside class="chiffre-cle"><p class="big">68 %</p><p>de notre électricité produite par le nucléaire en 2025, et un record de 92 TWh exportés.</p></aside>
 <p><strong>Ce qu'il faut reconnaître.</strong> Les nouveaux chantiers ont connu de graves dérives. L'EPR de Flamanville devait coûter 3,3 milliards d'euros et démarrer en 2012. Il a coûté environ 23,7 milliards, avec douze ans de retard. Dire que le nouveau nucléaire est forcément moins cher que tout le reste serait malhonnête.</p>
 <p><strong>Comment on évite de recommencer.</strong> On applique le principe 1 : le coût et le calendrier de chaque nouveau chantier sont publiés chaque mois, avec les écarts par rapport aux prévisions. On ne découvre plus les dérapages dix ans après. Et on reconstruit une filière de compétences pour ne plus dépendre de quelques experts proches de la retraite.</p>
 <div class="part-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
@@ -361,6 +381,7 @@ article.doc { max-width: 68ch; min-width: 0; }
   </div>
   <ul class="liens">
     <li><a href="programme.html">Le programme complet</a></li>
+    <li><a href="viktor.html">Qui est Viktor ?</a></li>
     <li><a href="quiz.html">Le quiz</a></li>
     <li><a href="comptes.html">Les comptes de la campagne</a></li>
     <li><a href="presse.html">Espace presse</a></li>
