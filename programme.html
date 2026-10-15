@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Programme Venet 2027</title>
+<meta name="description" content="Le programme complet de Viktor Venet, expliqué : le constat, la méthode, les 16 mesures et les positions. Rendez-nous des comptes.">
+<meta property="og:title" content="Le programme expliqué · Venet 2027">
+<meta property="og:image" content="https://viktor59000.github.io/Presidentielle/img/og.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#FF5A1F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Page longue de lecture : colonne de texte à ~68 caractères, sommaire collant à gauche sur grand écran. */
+:root {
+  --paper: #ffffff; --paper-2: #f1f2f4; --ink: #15171c; --muted: #5b6070; --rule: #dcdee3;
+  --orange: #ff5a1f; --orange-text: #c2410c;
+  --ff-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --ff-body: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; color-scheme: dark; }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.7 var(--ff-body); -webkit-font-smoothing: antialiased; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+a { color: var(--orange-text); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 4vw); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
+.logo svg { height: 22px; width: auto; display: block; }
+.logo .l { fill: var(--ink); } .logo .b { fill: var(--orange); }
+.top nav a { color: var(--muted); text-decoration: none; font-weight: 500; padding: 10px; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover { color: var(--ink); }
+.cover { background: var(--orange); color: #15171c; }
+.cover .wrap { padding-block: clamp(40px, 7vw, 80px); display: grid; gap: 20px; }
+.cover .k { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
+.cover h1 { font: 900 clamp(3.2rem, 11vw, 8.5rem)/.86 var(--ff-display); text-transform: uppercase; margin: 0; }
+.cover p { font-size: 1.2rem; max-width: 52ch; margin: 0; border-top: 2px solid #15171c; padding-top: 18px; }
+.layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 64px; padding-block: 56px 0; }
+.toc { position: sticky; top: 88px; align-self: start; }
+.toc p { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
+.toc ol { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+.toc a { display: block; padding: 10px 0; border-bottom: 1px solid var(--rule); color: var(--ink); text-decoration: none; font-weight: 500; line-height: 1.3; }
+.toc a span { display: block; font: 700 .72rem var(--ff-body); letter-spacing: .1em; text-transform: uppercase; color: var(--orange-text); }
+.toc a:hover { color: var(--orange-text); }
+article.doc { max-width: 68ch; min-width: 0; }
+.doc h2, .doc h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .95; text-wrap: balance; }
+
+.doc h2.part .pk { display: block; font: 700 .8rem var(--ff-body); letter-spacing: .12em; color: var(--orange-text); margin-bottom: 10px; }
+.doc h2.part { font-size: clamp(2.6rem, 6vw, 4.2rem); margin: 0 0 28px; }
+.part-mark { display: grid; gap: 5px; width: 36px; margin: 72px 0 18px; }
+.part-mark i { height: 7px; background: var(--orange); }
+.doc > .part-mark:first-child { margin-top: 0; }
+.doc h3 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin: 52px 0 14px; padding-top: 18px; border-top: 2px solid var(--ink); }
+.doc h4 { font: 700 1.3rem/1.3 var(--ff-body); margin: 40px 0 10px; }
+.doc h5 { font: 700 1rem var(--ff-body); margin: 28px 0 6px; }
+.doc p { margin: 0 0 16px; }
+.doc p > strong:first-child { color: var(--ink); }
+.doc ul, .doc ol { margin: 0 0 18px; padding-left: 1.3em; }
+.doc li { margin-bottom: 6px; }
+.doc ul li::marker { color: var(--orange-text); }
+.doc em { color: var(--muted); }
+.back { display: inline-flex; margin-top: 40px; font-weight: 700; color: var(--ink); }
+footer { margin-top: 96px; background: #15171c; color: #a3a8b5; }
+footer .wrap { padding-block: 40px; font-size: .92rem; display: grid; gap: 8px; }
+footer strong { color: #fff; }
+footer .logo .l { fill: #fff; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 32px; }
+  .toc { position: static; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+  <nav aria-label="Navigation"><a href="index.html">Accueil</a><a href="index.html#positions">Positions</a><a href="index.html#rejoindre">Rejoindre</a></nav>
+</div></header>
+<section class="cover"><div class="wrap">
+  <span class="k">Le programme complet · version 1, octobre 2026</span>
+  <h1>Rendez-nous<br>des comptes.</h1>
+  <p>Le constat, la méthode, les 16 mesures et mes positions, expliqués en détail. Avec les chiffres, les sources, les objections et ce qui pourrait mal tourner.</p>
+</div></section>
+<div class="wrap layout">
+  <nav class="toc" aria-label="Sommaire"><p>Sommaire</p><ol><li><a href="#partie-1-le-constat"><span>Partie 1</span>Le constat</a></li><li><a href="#partie-2-la-méthode"><span>Partie 2</span>La méthode</a></li><li><a href="#partie-3-les-16-mesures"><span>Partie 3</span>Les 16 mesures</a></li><li><a href="#partie-4-mes-positions-sur-les-grands-sujets"><span>Partie 4</span>Mes positions sur les grands sujets</a></li><li><a href="#partie-5-ce-que-je-ne-promets-pas-et-le-calendrier"><span>Partie 5</span>Ce que je ne promets pas, et le calendrier</a></li></ol></nav>
+  <article class="doc">
+<h3 id="avant-propos">Avant-propos</h3>
+<p>Je m'appelle Viktor Venet. J'ai 20 ans, je suis étudiant en alternance à Saint-Étienne, et je suis candidat à l'élection présidentielle de 2027.</p>
+<p>Je n'ai pas de parti, pas d'argent, pas de réseau. Je fais campagne avec une intelligence artificielle qui m'aide à écrire, à vérifier les chiffres et à m'organiser. Je le dis clairement, parce que c'est la règle que je m'impose : tout ce qui me concerne est sur la table.</p>
+<p>On me demandera pourquoi je me présente alors que mes chances sont minuscules. Ma réponse est simple. Comme des millions de gens, j'en ai assez d'attendre. D'attendre une réponse de la CAF. D'attendre de savoir ce que décide un ministère. D'attendre que des réformes pensées loin de nous fonctionnent enfin. Je me suis dit qu'au lieu de râler dans mon coin, j'allais poser les questions là où elles doivent être posées : pendant une élection présidentielle.</p>
+<p>Ce texte n'est pas un tract. Je veux qu'on comprenne d'où viennent mes idées, comment je compte les appliquer, ce qu'elles coûtent et ce qui pourrait mal tourner. Si vous n'êtes pas d'accord, au moins vous saurez précisément avec quoi.</p>
+<p>Il se lit dans l'ordre :</p>
+<ol><li><strong>Le constat</strong> : ce qui ne va pas, et pourquoi.</li><li><strong>La méthode</strong> : comment je pense qu'on doit décider.</li><li><strong>Les 16 mesures</strong> : ce que je propose, en détail.</li><li><strong>Les positions</strong> : mon cap sur les grands sujets.</li><li><strong>Ce que je ne promets pas</strong>, et le calendrier.</li></ol>
+<div class="part-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+<h2 id="partie-1-le-constat" class="part"><span class="pk">Partie 1</span>Le constat</h2>
+<p>La France ne manque ni d'argent public, ni de fonctionnaires compétents et dévoués, ni d'idées. Elle manque de trois choses beaucoup plus simples.</p>
+<h3 id="1-elle-manque-de-visibilité">1. Elle manque de visibilité</h3>
+<p>Aujourd'hui, un citoyen ne voit presque rien de ce que fait l'État pour lui, ou à cause de lui.</p>
+<p>Quand vous déposez un dossier à la CAF, à la CPAM ou en préfecture, il disparaît. Vous ne savez pas qui le traite, où il en est, ni quand vous aurez une réponse. Vous relancez, vous attendez au téléphone, on vous demande des pièces que vous avez déjà envoyées.</p>
+<p>Ce n'est pas une impression. En 2025, le Défenseur des droits a reçu plus de 165 000 réclamations et demandes, 17 % de plus qu'en 2024. Les saisines liées aux relations avec les services publics ont augmenté de 20 % en un an, et l'institution pointe une dématérialisation qui laisse des gens sur le bord du chemin. Selon le Credoc, un tiers de la population est éloignée du numérique.</p>
+<p>Les conséquences sont concrètes. D'après la DREES, environ un tiers des foyers qui ont droit au RSA ne le demandent pas, et pour la prime d'activité c'est environ un foyer éligible sur deux. Quand l'administration est opaque, ce ne sont pas les fraudeurs qui en souffrent : ce sont les gens honnêtes qui abandonnent.</p>
+<p>Le même brouillard entoure le pouvoir. Pour obtenir un document d'un ministère, il faut le demander, attendre, puis souvent saisir la Commission d'accès aux documents administratifs (CADA). Celle-ci a reçu plus de 10 000 saisines en 2023, et elle met en moyenne entre 50 et 66 jours à répondre, alors que la loi lui en donne 30. En pratique, seuls les journalistes et les plus tenaces vont au bout.</p>
+<p><strong>On ne peut pas juger ce qu'on ne voit pas.</strong> C'est le premier problème.</p>
+<h3 id="2-elle-manque-de-terrain">2. Elle manque de terrain</h3>
+<p>En France, les réformes descendent d'en haut. Elles sont pensées dans des bureaux parisiens, par des gens souvent brillants, mais qui n'ont pas vécu le problème qu'ils veulent régler. Puis elles sont imposées à tout le pays d'un coup.</p>
+<p>Résultat : des réformes qui paraissent logiques sur le papier et échouent à l'application. Les profs découvrent les nouveaux programmes à la rentrée. Les soignants apprennent les nouvelles règles par circulaire. Les agriculteurs remplissent des formulaires conçus par des gens qui n'ont jamais vu une exploitation.</p>
+<p>Et à la tête des ministères, on nomme des responsables politiques interchangeables, qui passent de l'Éducation au Travail puis à la Santé en quelques années, sans connaître aucun de ces métiers de l'intérieur.</p>
+<p><strong>On ne peut pas bien décider sur ce qu'on ne connaît pas.</strong> C'est le deuxième problème.</p>
+<h3 id="3-elle-manque-de-discernement">3. Elle manque de discernement</h3>
+<p>La France a un rapport compliqué à sa propre fierté.</p>
+<p>D'un côté, on est trop fiers là où on échoue. Notre administration est lente, nos élèves ont des journées parmi les plus chargées d'Europe, et pourtant on refuse souvent de regarder ce qui marche chez nos voisins, comme si s'inspirer d'eux était une humiliation.</p>
+<p>De l'autre, on n'est pas assez fiers là où on excelle. Notre nucléaire, nos ingénieurs, notre industrie de pointe et nos savoir-faire sont enviés dans le monde entier, et on en parle souvent avec gêne.</p>
+<p><strong>Je veux une France fière de ce qui marche, et humble sur le reste.</strong> Les deux vont ensemble : on ne peut être vraiment fier qu'en étant lucide.</p>
+<div class="part-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+<h2 id="partie-2-la-méthode" class="part"><span class="pk">Partie 2</span>La méthode</h2>
+<p>Un programme, ce n'est pas seulement une liste de promesses. C'est d'abord une manière de décider. Si la méthode est mauvaise, même les bonnes idées échouent. Voici la mienne.</p>
+<h3 id="les-cinq-principes">Les cinq principes</h3>
+<p>Chaque mesure de ce programme, et chaque mesure que je prendrais demain, doit respecter au moins un de ces principes et n'en contredire aucun.</p>
+<h4 id="principe-1-rendre-des-comptes">Principe 1 · Rendre des comptes</h4>
+<p>Tout ce qui est public doit être visible par défaut : les documents, les délais, les dépenses, la présence des élus, les salaires du sommet de l'État. Ce qui reste secret doit être justifié (défense, vie privée, sécurité des personnes), et non l'inverse.</p>
+<p>Aujourd'hui, c'est au citoyen de prouver qu'il a le droit de savoir. Je veux renverser la charge : c'est à l'État de prouver qu'il a une bonne raison de cacher.</p>
+<p>Pourquoi c'est si important ? Parce que la transparence ne coûte presque rien et change les comportements. Un service qui sait que ses délais seront publiés s'organise pour les réduire. Un élu qui sait que sa présence sera visible vient en séance. Un chantier dont le coût est publié chaque mois dérape moins.</p>
+<p>Ce principe s'applique d'abord au pouvoir lui-même, en commençant par son propre argent.</p>
+<h4 id="principe-2-comprendre-avant-de-décider">Principe 2 · Comprendre avant de décider</h4>
+<p>Avant toute décision, on va voir. Les ministres, les directeurs d'administration et leurs équipes passent du temps sur le terrain : dans les classes, les services d'urgences, les guichets, les ateliers, les exploitations. On écoute ceux qui vivent le problème, on observe, on mesure. On cerne tout le sujet avant de trancher.</p>
+<p>C'est une démarche empirique : partir de la réalité observée, et non d'une théorie élaborée dans un bureau. Elle prend un peu plus de temps au début, et elle en fait gagner énormément ensuite, parce qu'elle évite les réformes qu'il faut défaire deux ans plus tard.</p>
+<h4 id="principe-3-le-terrain-aux-commandes">Principe 3 · Le terrain aux commandes</h4>
+<p>Les décisions doivent remonter du terrain, pas descendre d'en haut. Concrètement, ça veut dire deux choses :</p>
+<ul><li>ceux qui dirigent connaissent le métier qu'ils dirigent ;</li><li>ceux qui exercent ce métier sont consultés avant chaque réforme, et leur avis est rendu public.</li></ul>
+<p>Ce n'est pas du populisme anti-experts. Les vrais experts d'une classe de CP, ce sont d'abord les enseignants de CP. Les vrais experts d'un service d'urgences, ce sont d'abord les urgentistes et les infirmières.</p>
+<h4 id="principe-4-s-inspirer-de-ce-qui-marche-puis-tester">Principe 4 · S'inspirer de ce qui marche, puis tester</h4>
+<p>Avant d'inventer une réforme, on regarde qui a déjà réussi, en France ou ailleurs. Beaucoup de nos problèmes ont été résolus par d'autres. Avant de généraliser, on teste localement, avec des volontaires, et on publie les résultats, bons ou mauvais.</p>
+<p>C'est moins cher, plus rapide et beaucoup moins risqué qu'une grande réforme nationale imposée d'un coup.</p>
+<h4 id="principe-5-le-résultat-plutôt-que-la-forme">Principe 5 · Le résultat plutôt que la forme</h4>
+<p>On juge un service, un élu ou un salarié sur ce qu'il produit, pas sur le temps qu'il passe assis ni sur le respect des procédures. Ce qui compte pour l'usager, c'est d'avoir une réponse juste et rapide, pas que le formulaire soit parfaitement rempli.</p>
+<h3 id="comment-naît-une-réforme-repérer-tester-généraliser">Comment naît une réforme : repérer, tester, généraliser</h3>
+<p>Ces principes donnent un chemin, toujours le même, en trois étapes.</p>
+<ol><li><strong>Repérer.</strong> On part d'un problème vécu sur le terrain. On regarde comment d'autres l'ont résolu, en France (une ville, une école, une entreprise) ou à l'étranger. On rassemble les chiffres.</li><li><strong>Tester.</strong> On essaie la solution avec des volontaires (des villes, des académies, des entreprises), pendant une durée fixée à l'avance, avec des indicateurs annoncés dès le départ. On publie les résultats.</li><li><strong>Généraliser.</strong> Si ça marche, on l'étend à tout le pays. Si ça ne marche pas, on l'abandonne, sans ego, et on explique pourquoi.</li></ol>
+<h3 id="le-cap-et-la-route">Le cap et la route</h3>
+<p>On me fera une objection, et elle est juste : comment puis-je donner mon avis sur l'immigration, les retraites ou l'Europe, alors que je dis qu'il faut laisser décider les gens du terrain ?</p>
+<p>Je réponds en séparant deux choses.</p>
+<ul><li><strong>Le cap</strong>, c'est la direction et les valeurs. C'est le rôle d'un candidat, et c'est ce que les électeurs choisissent.</li><li><strong>La route</strong>, ce sont les solutions précises, les chiffres et le calendrier. C'est le rôle de ceux qui font le métier, et ça se tranche par des tests.</li></ul>
+<p><strong>Je fixe le cap. Les gens du terrain tracent la route.</strong> Vous ne me verrez pas sortir d'un bureau un âge de départ à la retraite ou un nombre exact de postes. Vous saurez toujours, en revanche, dans quelle direction je veux aller et pourquoi.</p>
+<div class="part-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+<h2 id="partie-3-les-16-mesures" class="part"><span class="pk">Partie 3</span>Les 16 mesures</h2>
+<p>Chaque mesure est présentée de la même façon : le constat, ce que je propose, comment on s'y prend, ce que ça change pour vous, les objections qu'on peut me faire, et comment on saura si ça marche.</p>
+<h3 id="bloc-a-des-services-publics-qui-répondent">Bloc A · Des services publics qui répondent</h3>
+<h4 id="mesure-1-ton-dossier-suivi-comme-un-colis">Mesure 1 · Ton dossier suivi comme un colis</h4>
+<p><strong>Le constat.</strong> Quand vous commandez une paire de baskets, vous savez à chaque instant où elle se trouve. Quand vous déposez une demande d'aide au logement, vous ne savez rien. Ce silence crée de l'angoisse, des relances inutiles qui engorgent les services, et des abandons de droits.</p>
+<p><strong>Ce que je propose.</strong> Chaque démarche auprès d'un grand service public (CAF, CPAM, France Travail, préfectures, impôts, URSSAF) reçoit un numéro de suivi. En ligne, vous voyez :</p>
+<ul><li>l'étape où se trouve votre dossier ;</li><li>le service qui le traite ;</li><li>les pièces reçues et celles qui manquent ;</li><li>le délai estimé avant la décision.</li></ul>
+<p><strong>Comment on s'y prend.</strong> Les organismes ont déjà ces informations dans leurs logiciels internes. Il ne s'agit pas d'inventer, mais de les montrer à l'usager. On commence par la CAF et les préfectures, là où les réclamations sont les plus nombreuses, dans quelques départements tests, avant d'étendre.</p>
+<p><strong>Ce que ça change pour vous.</strong> Vous savez où vous en êtes sans appeler. Si une pièce manque, vous le voyez tout de suite au lieu de l'apprendre trois mois plus tard.</p>
+<p><strong>Les objections.</strong> « Ça coûte cher en informatique. » Moins que les millions d'appels et de courriers de relance traités chaque année. « Ça va mettre les agents sous pression. » Le suivi montre aussi quand un service manque de moyens : c'est un argument pour les renforcer, pas pour les blâmer.</p>
+<p><strong>Comment on saura si ça marche.</strong> Moins d'appels de relance, moins de réclamations au Défenseur des droits, et un taux de recours aux aides qui augmente.</p>
+<h4 id="mesure-2-les-délais-réels-publiés-chaque-mois">Mesure 2 · Les délais réels publiés chaque mois</h4>
+<p><strong>Le constat.</strong> Personne ne sait combien de temps prend vraiment une démarche. Les délais officiels sont théoriques, et les délais réels varient énormément d'un département à l'autre.</p>
+<p><strong>Ce que je propose.</strong> Chaque organisme publie chaque mois ses délais réels de traitement, démarche par démarche et département par département, sur un site unique et lisible.</p>
+<p><strong>Comment on s'y prend.</strong> Ces chiffres existent déjà en interne. On fixe un format commun et on les publie en données ouvertes, pour que les journalistes, les associations et les citoyens puissent les comparer.</p>
+<p><strong>Ce que ça change pour vous.</strong> Vous savez à quoi vous attendre. Et les services qui traînent sont visibles, ce qui pousse à trouver des solutions, ou à leur donner plus de moyens.</p>
+<p><strong>Les objections.</strong> « On va humilier les services en difficulté. » Non : on va montrer où il faut des renforts. Aujourd'hui, ce sont les usagers qui paient en silence le manque de moyens.</p>
+<p><strong>Comment on saura si ça marche.</strong> Les délais baissent, et les écarts entre départements se réduisent.</p>
+<h4 id="mesure-3-le-droit-à-un-humain">Mesure 3 · Le droit à un humain</h4>
+<p><strong>Le constat.</strong> La numérisation a simplifié la vie de beaucoup de gens, mais un tiers des Français sont éloignés du numérique. Pour eux, un service public uniquement en ligne est un service public fermé.</p>
+<p><strong>Ce que je propose.</strong> Un droit opposable à un contact humain : un numéro joignable dans un délai raisonnable, ou un rappel garanti sous 48 heures par une personne qui a accès à votre dossier et peut agir dessus.</p>
+<p><strong>Comment on s'y prend.</strong> On s'appuie sur les agents d'accueil existants et sur les maisons France Services, en les dotant d'un accès direct aux dossiers. Le suivi en ligne (mesure 1) réduit les appels inutiles et libère du temps pour ceux qui ont vraiment besoin de parler à quelqu'un.</p>
+<p><strong>Ce que ça change pour vous.</strong> Vous n'êtes plus seul face à un formulaire bloqué ou une décision incompréhensible.</p>
+<p><strong>Comment on saura si ça marche.</strong> Le taux de rappels effectués en 48 heures est publié chaque mois.</p>
+<h3 id="bloc-b-le-terrain-aux-commandes">Bloc B · Le terrain aux commandes</h3>
+<h4 id="mesure-4-des-ministres-qui-connaissent-le-métier">Mesure 4 · Des ministres qui connaissent le métier</h4>
+<p><strong>Le constat.</strong> Les ministres changent souvent, et sont rarement issus du secteur qu'ils dirigent. Ils arrivent avec des idées générales, ont besoin de mois pour comprendre le terrain, et partent souvent avant d'avoir vu les effets de leurs décisions.</p>
+<p><strong>Ce que je propose.</strong> Je m'engage à nommer à la tête de chaque ministère technique une personne qui a une vraie expérience de terrain du secteur : une ancienne enseignante à l'Éducation, un soignant à la Santé, un agriculteur à l'Agriculture, un ancien chef d'entreprise ou artisan à l'Économie. Et à les garder assez longtemps pour qu'ils voient le résultat de leur travail.</p>
+<p><strong>Comment on s'y prend.</strong> C'est un engagement du président, qui nomme les ministres : aucune loi n'est nécessaire. Le ministre s'entoure ensuite de hauts fonctionnaires, dont l'expertise reste indispensable, mais la direction est donnée par quelqu'un qui connaît la réalité.</p>
+<p><strong>Les objections.</strong> « Un bon praticien n'est pas forcément un bon gestionnaire. » C'est vrai, et c'est pourquoi l'audition publique (mesure 5) permet de vérifier les deux.</p>
+<h4 id="mesure-5-une-audition-publique-avant-chaque-nomination">Mesure 5 · Une audition publique avant chaque nomination</h4>
+<p><strong>Le constat.</strong> Aujourd'hui, un ministre est nommé du jour au lendemain, sans que personne ne sache ce qu'il connaît du sujet ni ce qu'il compte faire.</p>
+<p><strong>Ce que je propose.</strong> Avant chaque nomination, le futur ministre est auditionné en public, en direct, par un panel de professionnels de son secteur. Il explique son parcours, sa vision du terrain et ses priorités. L'audition est diffusée et archivée.</p>
+<p><strong>Comment on s'y prend.</strong> Le président en fait une règle pour son gouvernement. Le panel est tiré au sort parmi des volontaires du secteur concerné.</p>
+<p><strong>Ce que ça change pour vous.</strong> Vous savez qui dirige le ministère et ce qu'il a promis. Vous pourrez le lui rappeler.</p>
+<h4 id="mesure-6-des-conseils-de-praticiens">Mesure 6 · Des conseils de praticiens</h4>
+<p><strong>Le constat.</strong> Les réformes sont souvent préparées sans ceux qui devront les appliquer. On consulte parfois les syndicats ou les ordres professionnels, mais rarement les gens qui sont dans les classes et les services au quotidien.</p>
+<p><strong>Ce que je propose.</strong> Pour chaque grande réforme, un conseil d'une trentaine de professionnels tirés au sort (profs, infirmiers, policiers, artisans, agents d'accueil…) est réuni pendant plusieurs semaines. Il étudie le projet, va sur le terrain, auditionne qui il veut, et rend un avis public avant le vote.</p>
+<p><strong>Comment on s'y prend.</strong> Les membres sont indemnisés et libérés de leur travail pendant la mission. L'avis n'est pas contraignant, mais le gouvernement doit y répondre publiquement, point par point.</p>
+<p><strong>Comment on saura si ça marche.</strong> Moins de réformes retirées ou corrigées dans les deux ans.</p>
+<h3 id="bloc-c-s-inspirer-de-ce-qui-marche-ailleurs">Bloc C · S'inspirer de ce qui marche ailleurs</h3>
+<h4 id="mesure-7-une-cellule-ça-marche-ailleurs">Mesure 7 · Une cellule « ça marche ailleurs »</h4>
+<p><strong>Le constat.</strong> D'autres pays ont résolu des problèmes que nous traînons depuis des décennies. Nous l'ignorons souvent, ou nous refusons de le regarder.</p>
+<p><strong>Ce que je propose.</strong> Une petite équipe rattachée au Premier ministre, composée d'analystes et de praticiens, qui repère chaque mois une politique étrangère ou locale ayant fait ses preuves, l'étudie sérieusement (résultats, coûts, conditions de réussite) et propose de la tester en France. Ses rapports sont publics.</p>
+<p><strong>Ce que ça change.</strong> La France arrête de réinventer la roue, et le débat public se nourrit d'exemples réels plutôt que de slogans.</p>
+<h4 id="mesure-8-des-journées-d-école-moins-longues">Mesure 8 · Des journées d'école moins longues</h4>
+<p><strong>Le constat.</strong> Les élèves français ont plus d'heures de cours que la moyenne des pays de l'OCDE : plus de 8 000 heures du CP à la 3e, contre environ 7 600. Mais ces heures sont tassées sur environ 36 semaines par an, contre 38 en moyenne. En primaire, la France compte environ 162 jours d'école par an, l'un des chiffres les plus bas d'Europe. Résultat : des journées très longues et fatigantes, surtout pour les plus jeunes.</p>
+<p><strong>Ce que je propose.</strong> On répartit mieux le temps : un peu plus de jours d'école dans l'année, et des journées plus courtes. L'Allemagne, où l'école s'est longtemps concentrée sur la matinée, inspire ce rééquilibrage.</p>
+<p><strong>Comment on s'y prend.</strong> Le calendrier scolaire touche les familles, le tourisme, les collectivités et les enseignants. C'est exactement le genre de sujet qu'on ne décide pas d'en haut : on teste plusieurs organisations dans des académies volontaires, avec un conseil de praticiens (mesure 6), et on mesure la fatigue, les apprentissages et la satisfaction des familles.</p>
+<p><strong>Les objections.</strong> « Les vacances d'été, c'est sacré, et le tourisme en dépend. » On ne parle pas de supprimer les vacances, mais de raccourcir un peu les plus longues pour alléger toutes les journées. Le test dira jusqu'où aller.</p>
+<h4 id="mesure-9-des-classes-plus-petites">Mesure 9 · Des classes plus petites</h4>
+<p><strong>Le constat.</strong> On le sait : un enseignant qui a moins d'élèves peut mieux suivre chacun, surtout dans les premières années, où se jouent la lecture et le calcul.</p>
+<p><strong>Ce que je propose.</strong> Une norme nationale d'encadrement inscrite dans la loi, sur le modèle norvégien : depuis 2019, la Norvège impose au maximum 15 élèves par enseignant dans les quatre premières années de l'école, et 20 ensuite, calculé à l'échelle de chaque école.</p>
+<p><strong>Comment on s'y prend.</strong> Progressivement, en commençant par les premières classes et les écoles qui en ont le plus besoin, au rythme des recrutements. Ça suppose de rendre le métier d'enseignant plus attractif, ce qui passe aussi par le respect de leur expertise (mesures 4 et 6).</p>
+<p><strong>Les objections.</strong> « Ça coûte très cher. » Oui, c'est l'une des mesures les plus coûteuses de ce programme, et je l'assume : l'école est le meilleur investissement d'un pays. C'est pour ça qu'elle est progressive.</p>
+<h3 id="bloc-d-travailler-mieux-pas-plus-longtemps">Bloc D · Travailler mieux, pas plus longtemps</h3>
+<h4 id="mesure-10-la-semaine-de-4-jours-32-heures">Mesure 10 · La semaine de 4 jours, 32 heures</h4>
+<p><strong>Le constat.</strong> On mesure encore trop souvent le travail en heures de présence. Pourtant, les expériences de réduction du temps de travail montrent qu'on peut produire autant, voire mieux, en moins de temps, avec des salariés en meilleure santé.</p>
+<p><strong>Ce qui a déjà été testé.</strong></p>
+<ul><li>En Islande, entre 2015 et 2019, 2 500 salariés sont passés de 40 heures à 35 ou 36 heures par semaine sans baisse de salaire. La productivité a été maintenue ou améliorée dans la plupart des cas, et le bien-être a nettement progressé. Aujourd'hui, environ 86 % des salariés islandais travaillent moins ou en ont le droit.</li><li>Au Royaume-Uni, en 2022, 61 entreprises ont testé pendant six mois la semaine de quatre jours sans baisse de salaire. 56 l'ont gardée, 18 de façon permanente. Les arrêts maladie ont baissé de 65 % et les départs de salariés de 57 %.</li></ul>
+<p><strong>Ce que je propose.</strong> Passer progressivement de 35 heures sur 5 jours à 32 heures sur 4 jours, sans baisse de salaire.</p>
+<p><strong>Comment on s'y prend.</strong> Par étapes, sans l'imposer d'un coup :</p>
+<ol><li>Les entreprises et administrations volontaires signent un accord, avec un accompagnement et une aide publique pendant la transition.</li><li>On mesure pendant au moins un an : production, chiffre d'affaires, absentéisme, recrutements, santé.</li><li>On généralise secteur par secteur, là où ça marche, en négociant avec les partenaires sociaux.</li></ol>
+<p><strong>Ce que ça change pour vous.</strong> Un jour de plus pour votre vie, votre famille, une formation ou un projet. Et pour l'économie, des salariés moins épuisés et des heures libérées qui peuvent créer des embauches.</p>
+<p><strong>Les objections.</strong> « Les petites entreprises ne pourront pas suivre. » C'est pourquoi on commence par le volontariat et qu'on adapte selon les secteurs. « Ça n'a pas marché partout. » Exact : certaines entreprises de l'essai britannique ont arrêté. C'est justement la logique du test.</p>
+<h4 id="mesure-11-juger-le-travail-au-résultat">Mesure 11 · Juger le travail au résultat</h4>
+<p><strong>Le constat.</strong> Dans beaucoup de bureaux, on valorise encore celui qui reste tard plutôt que celui qui fait du bon travail. C'est une culture du présentéisme qui épuise les gens sans rien produire de plus.</p>
+<p><strong>Ce que je propose.</strong> Partout où c'est possible (bureaux, projets, administration), on évalue le travail sur les objectifs atteints, fixés clairement à l'avance, plutôt que sur le temps passé assis. L'État commence par lui-même, dans ses administrations.</p>
+<p><strong>Ce que ce n'est pas.</strong> Ce n'est pas du travail payé à la pièce. Le salaire, les protections, le droit à la déconnexion et la durée maximale du travail restent les mêmes. Il s'agit de changer la manière d'évaluer, pas de précariser.</p>
+<p><strong>Comment on saura si ça marche.</strong> Satisfaction des agents, qualité du service rendu, et baisse des arrêts liés à l'épuisement.</p>
+<h3 id="bloc-e-un-pouvoir-qui-rend-des-comptes">Bloc E · Un pouvoir qui rend des comptes</h3>
+<h4 id="mesure-12-jour-1-je-commence-par-moi">Mesure 12 · Jour 1 : je commence par moi</h4>
+<p><strong>Le constat.</strong> Le président de la République et le Premier ministre perçoivent environ 16 000 euros brut par mois, un ministre environ 10 700 euros, un député ou un sénateur 7 637 euros (hors frais de mandat). Le SMIC est à environ 1 823 euros brut. Je ne dis pas que les responsables politiques doivent être mal payés. Je dis qu'on ne peut pas demander des efforts aux Français sans montrer l'exemple.</p>
+<p><strong>Ce que je propose.</strong></p>
+<ul><li><strong>Le premier jour</strong>, un décret pour baisser la rémunération du président, du Premier ministre et des ministres. Elle est fixée par décret (n° 2012-983), le président peut donc le faire immédiatement.</li><li><strong>Un audit public de tous les avantages du sommet de l'État</strong> : logements de fonction, voitures, cabinets ministériels, frais de représentation, avantages des anciens présidents. Tout est mis en ligne.</li><li><strong>Un projet de loi organique</strong> pour revoir les indemnités et les frais des parlementaires.</li></ul>
+<p><strong>Les limites, honnêtement.</strong> Je ne peux pas baisser seul l'indemnité des députés et sénateurs : il faut une loi organique votée par le Parlement, et le Sénat doit l'approuver pour ce qui le concerne. Je le dirai franchement, et chacun verra qui vote quoi.</p>
+<p><strong>Ce que ce n'est pas.</strong> Les salaires des fonctionnaires de terrain (profs, soignants, agents d'accueil) ne sont pas concernés. Beaucoup sont mal payés, et ce programme compte sur eux.</p>
+<h4 id="mesure-13-les-dossiers-des-ministres-en-accès-libre">Mesure 13 · Les dossiers des ministres en accès libre</h4>
+<p><strong>Le constat.</strong> Aujourd'hui, pour obtenir une note, une étude ou un agenda d'un ministère, il faut le demander. En cas de refus ou de silence, il faut saisir la CADA, qui reçoit plus de 10 000 saisines par an et met en moyenne près de deux mois à répondre, souvent pour rappeler que le document était communicable depuis le début. Le droit existe, mais il est réservé aux plus tenaces.</p>
+<p><strong>Ce que je propose.</strong> On renverse la logique : les documents des ministères sont publiés d'office, sans qu'on ait à les demander. Notes, études, rapports, agendas des ministres, comptes rendus de réunions, montants des contrats publics. Seules exceptions : le secret de la défense, la vie privée des personnes, la sécurité et le secret des affaires, et chaque exception doit être justifiée.</p>
+<p><strong>L'exemple.</strong> En Suède, le principe d'accès public aux documents officiels existe depuis 1766. Les Suédois peuvent consulter la plupart des documents de leurs administrations, et ce pays n'est pas ingouvernable pour autant.</p>
+<p><strong>Comment on s'y prend.</strong> Une loi pose le principe de publication par défaut. Les ministères ont un délai pour s'organiser, en commençant par les agendas et les études, les plus simples à publier.</p>
+<p><strong>Les objections.</strong> « Les fonctionnaires vont arrêter d'écrire franchement. » C'est un vrai risque, observé dans certains pays. La réponse est de protéger les documents de travail en cours de réflexion pendant un temps limité, puis de les publier une fois la décision prise.</p>
+<h4 id="mesure-14-chaque-élu-écoutable-en-direct-et-sa-présence-publ">Mesure 14 · Chaque élu écoutable en direct, et sa présence publique</h4>
+<p><strong>Le constat.</strong> Les débats parlementaires sont diffusés, mais on ne voit qu'une partie de l'hémicycle, on n'entend que celui qui a la parole, et on ne sait pas vraiment qui est présent. Les absences ne se voient pas.</p>
+<p><strong>Ce que je propose.</strong></p>
+<ul><li>Chaque député et sénateur dispose de son propre poste avec micro, diffusé en direct. N'importe quel citoyen peut écouter l'élu de son choix, en particulier le sien, et suivre ses interventions.</li><li>La présence de chacun en séance est enregistrée et publiée, débat par débat.</li></ul>
+<p><strong>Ce que ça change.</strong> Il y aura peut-être moins de monde dans l'hémicycle pour certains débats, et c'est normal : un élu travaille aussi en commission et dans sa circonscription. Mais quand un débat est politique, une absence devient un choix visible, que l'élu devra assumer devant ses électeurs.</p>
+<p><strong>Comment on s'y prend.</strong> Le fonctionnement des assemblées dépend de leur règlement, que le président ne peut pas modifier seul. Je le proposerai publiquement aux deux assemblées, avec le soutien de l'opinion. Les élus qui refuseront devront expliquer pourquoi.</p>
+<h3 id="bloc-f-fiers-de-ce-qui-marche">Bloc F · Fiers de ce qui marche</h3>
+<h4 id="mesure-15-des-villes-qui-vivent-aussi-la-nuit">Mesure 15 · Des villes qui vivent aussi la nuit</h4>
+<p><strong>Le constat.</strong> Nos centres-villes se vident à 19 heures. Les magasins ferment au moment où les gens qui travaillent en journée pourraient enfin y aller. Beaucoup de jeunes et de salariés en horaires décalés n'ont nulle part où aller le soir.</p>
+<p><strong>Ce que je propose.</strong> Permettre aux commerces d'ouvrir en soirée et la nuit dans les villes qui le souhaitent, pour redonner vie aux centres-villes, créer des emplois et s'adapter aux rythmes de vie actuels.</p>
+<p><strong>Ce qui existe déjà.</strong> Depuis la loi de 2015 sur la croissance et l'activité, les commerces des zones touristiques internationales peuvent ouvrir jusqu'à minuit, à trois conditions : un salaire doublé pour les heures du soir, le volontariat des salariés, et un accord collectif. On ne part donc pas de zéro : on étend ce cadre aux villes volontaires.</p>
+<p><strong>Comment on s'y prend.</strong></p>
+<ul><li>Les villes volontaires définissent, avec leurs habitants, les quartiers concernés.</li><li>Chaque grande ville nomme un <strong>« maire de la nuit »</strong>, comme Amsterdam le fait depuis plus de dix ans, chargé de faire dialoguer commerçants, riverains, transports et police.</li><li><strong>On teste en même temps les transports en commun la nuit</strong>, sans quoi personne ne viendra.</li><li>Bilan public après un an.</li></ul>
+<p><strong>Les conséquences auxquelles il faut penser.</strong></p>
+<ul><li><em>La santé des salariés.</em> Le travail de nuit est pénible. Il reste volontaire, majoré, compensé par du repos, et personne ne peut être sanctionné pour l'avoir refusé.</li><li><em>La concurrence.</em> Le test doit vérifier que les petits commerces en profitent aussi, et pas seulement les grandes enseignes.</li><li><em>Les riverains et la sécurité.</em> Les quartiers sont choisis avec les habitants, et la sécurité est pensée avec les forces de l'ordre dès le départ.</li></ul>
+<p><strong>Comment on saura si ça marche.</strong> Emplois créés, chiffre d'affaires des commerces, fréquentation, plaintes des riverains et incidents, mesurés avant et après.</p>
+<h4 id="mesure-16-le-nucléaire-une-fierté-française">Mesure 16 · Le nucléaire, une fierté française</h4>
+<p><strong>Le constat.</strong> Le nucléaire a produit environ 68 % de notre électricité en 2025, avec une production totale décarbonée à environ 95 %. La France a exporté cette année-là un record de 92 TWh d'électricité vers ses voisins, pour environ 5,4 milliards d'euros. Peu de pays au monde maîtrisent la construction et l'exploitation sûre de centrales : il faut des normes exigeantes, une autorité de contrôle indépendante et des compétences rares. C'est un atout stratégique que nous avons construit en cinquante ans.</p>
+<p><strong>Ce que je propose.</strong></p>
+<ul><li>Prolonger les réacteurs existants tant que l'autorité de sûreté le juge possible.</li><li>Construire de nouveaux réacteurs.</li><li>Former massivement soudeurs, techniciens et ingénieurs, en particulier par l'alternance.</li><li>Développer les renouvelables <strong>en complément</strong> du nucléaire, pas à sa place.</li></ul>
+<p><strong>Pourquoi le nucléaire.</strong> Il produit beaucoup, à la demande, quelle que soit la météo, et presque sans émettre de CO₂. Il nous rend moins dépendants des importations de gaz et de pétrole. Et c'est un savoir-faire que nous pouvons exporter.</p>
+<p><strong>Ce qu'il faut reconnaître.</strong> Les nouveaux chantiers ont connu de graves dérives. L'EPR de Flamanville devait coûter 3,3 milliards d'euros et démarrer en 2012. Il a coûté environ 23,7 milliards, avec douze ans de retard. Dire que le nouveau nucléaire est forcément moins cher que tout le reste serait malhonnête.</p>
+<p><strong>Comment on évite de recommencer.</strong> On applique le principe 1 : le coût et le calendrier de chaque nouveau chantier sont publiés chaque mois, avec les écarts par rapport aux prévisions. On ne découvre plus les dérapages dix ans après. Et on reconstruit une filière de compétences pour ne plus dépendre de quelques experts proches de la retraite.</p>
+<div class="part-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+<h2 id="partie-4-mes-positions-sur-les-grands-sujets" class="part"><span class="pk">Partie 4</span>Mes positions sur les grands sujets</h2>
+<p>Sur ces sujets, je donne un cap, pas un mode d'emploi. Les détails seront fixés avec ceux qui connaissent le terrain, puis testés.</p>
+<h3 id="immigration-appliquer-les-règles-intégrer-par-le-travail">Immigration : appliquer les règles, intégrer par le travail</h3>
+<p>Le débat sur l'immigration est saturé de slogans et pauvre en faits. Je veux d'abord qu'on connaisse les vrais chiffres : combien de demandes d'asile, en combien de temps elles sont traitées, combien de décisions sont réellement exécutées. Tout sera publié.</p>
+<p>Ensuite, deux choses simples. Les procédures doivent être rapides : attendre des mois ou des années dans l'incertitude n'est bon pour personne, ni pour les personnes concernées, ni pour le pays. Et l'intégration commence dès l'arrivée, par la langue et par le travail. Je crois que chacun devient en grande partie ce que son environnement lui permet de devenir : une personne qui apprend le français et travaille s'intègre, une personne bloquée sans droits et sans activité ne le peut pas. Nous étudierons sérieusement les systèmes qui fonctionnent ailleurs, comme la sélection par points du Canada.</p>
+<h3 id="sécurité-et-justice-des-sanctions-rapides-et-certaines">Sécurité et justice : des sanctions rapides et certaines</h3>
+<p>Les études en criminologie convergent : ce qui dissuade le plus, ce n'est pas la lourdeur de la peine, c'est la certitude d'être sanctionné, et rapidement. Une petite sanction appliquée tout de suite est plus efficace qu'une lourde peine prononcée trois ans plus tard, ou jamais.</p>
+<p>Ma priorité est donc une justice plus rapide, avec des délais de jugement publiés pour chaque tribunal. La réinsertion n'est pas de la naïveté : c'est la meilleure protection contre la récidive. Quant à la police, elle a besoin de moyens et de contrôle en même temps. Les deux vont ensemble : des caméras-piétons, des statistiques publiées, et la confiance qui va avec.</p>
+<h3 id="europe-plus-d-europe-là-où-elle-marche">Europe : plus d'Europe là où elle marche</h3>
+<p>Je ne suis ni pour « plus d'Europe partout », ni pour en sortir. L'Europe est utile là où nous sommes plus forts ensemble : l'énergie, la défense, la recherche, le poids face aux grandes puissances. Elle est pénible quand elle produit des normes tatillonnes qui étouffent les petites entreprises et les agriculteurs.</p>
+<p>Et elle doit, elle aussi, rendre des comptes : les votes de la France au Conseil de l'Union européenne seront rendus publics, pour qu'aucun gouvernement ne puisse plus dire « c'est la faute de Bruxelles » après avoir voté pour.</p>
+<h3 id="impôts-dépenser-mieux-avant-de-toucher-aux-taux">Impôts : dépenser mieux avant de toucher aux taux</h3>
+<p>Avant de parler de baisser ou d'augmenter les impôts, je veux qu'on sache où va chaque euro. Les grandes dépenses publiques seront consultables en ligne : qui a reçu combien, et pour quoi faire. La lutte contre la fraude, fiscale comme sociale, sera une priorité.</p>
+<p>C'est seulement une fois qu'on aura vu clair qu'on pourra décider, en connaissance de cause, de ce qui peut baisser.</p>
+<h3 id="retraites-pas-de-chamboulement-plus-de-liberté">Retraites : pas de chamboulement, plus de liberté</h3>
+<p>Les Français ont subi trop de réformes des retraites. Je ne promets pas d'en faire une de plus d'en haut. Je veux d'abord qu'on publie les vrais comptes du système, de façon compréhensible par tous. Ensuite, deux directions : mieux prendre en compte la pénibilité réelle des métiers, et laisser plus de liberté sur l'âge de départ, avec une pension qui varie selon le moment où l'on part.</p>
+<h3 id="démocratie-un-référendum-d-initiative-citoyenne-encadré">Démocratie : un référendum d'initiative citoyenne encadré</h3>
+<p>Je suis favorable à ce que les citoyens puissent déclencher un référendum, avec un seuil de signatures élevé pour éviter les abus, sur le modèle suisse. Conformément à ma méthode, on commencerait par le tester au niveau local, puis on l'étendrait au niveau national si l'expérience est concluante. Changer les choses par le vote, c'est le contraire de les changer par la violence.</p>
+<h3 id="défense-aux-côtés-de-l-ukraine">Défense : aux côtés de l'Ukraine</h3>
+<p>Je soutiens l'Ukraine face à l'agression qu'elle subit. Je crois à une défense européenne commune, sans renoncer à notre indépendance. Et je veux une industrie de défense française forte, qui forme et embauche, notamment en alternance.</p>
+<h3 id="énergie-pro-nucléaire-renouvelables-en-complément">Énergie : pro-nucléaire, renouvelables en complément</h3>
+<p>Voir la mesure 16.</p>
+<div class="part-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+<h2 id="partie-5-ce-que-je-ne-promets-pas-et-le-calendrier" class="part"><span class="pk">Partie 5</span>Ce que je ne promets pas, et le calendrier</h2>
+<h3 id="ce-que-je-ne-promets-pas">Ce que je ne promets pas</h3>
+<ul><li><strong>Je ne promets pas des chiffres sortis d'un bureau.</strong> Quand je ne sais pas, je le dis, et je dis comment je déciderai.</li><li><strong>Je ne promets pas que tout marchera.</strong> Certaines mesures échoueront au test. C'est le principe : on les abandonnera et on expliquera pourquoi.</li><li><strong>Je ne promets pas de tout faire seul.</strong> Plusieurs mesures dépendent du Parlement. Je les proposerai publiquement, et chacun verra qui vote quoi.</li><li><strong>Je ne promets pas que c'est gratuit.</strong> Les classes plus petites et la formation au nucléaire coûtent cher. La transparence et le suivi des dossiers coûtent peu et rapportent beaucoup.</li></ul>
+<h3 id="le-calendrier">Le calendrier</h3>
+<p><strong>Les 100 premiers jours.</strong></p>
+<ul><li>Jour 1 : décret de baisse des salaires du président et des ministres, lancement de l'audit des avantages.</li><li>Nomination de ministres issus du terrain, après audition publique.</li><li>Projet de loi sur la publication par défaut des documents publics.</li><li>Lancement des premiers tests : suivi des dossiers CAF et préfectures, semaine de 4 jours chez les volontaires, villes de nuit.</li><li>Création de la cellule « ça marche ailleurs ».</li></ul>
+<p><strong>La première année.</strong></p>
+<ul><li>Publication mensuelle des délais des services publics.</li><li>Premiers conseils de praticiens sur l'école et la santé.</li><li>Proposition aux assemblées sur la diffusion individuelle et la présence des élus.</li><li>Tests des nouveaux rythmes scolaires dans les académies volontaires.</li></ul>
+<p><strong>Les années suivantes.</strong></p>
+<ul><li>Généralisation de ce qui a marché, abandon de ce qui a échoué, avec un bilan public chaque année.</li><li>Montée en charge progressive de la norme d'encadrement à l'école et du programme nucléaire.</li></ul>
+<h3 id="pour-finir">Pour finir</h3>
+<p>Je n'ai pas toutes les réponses. Personne ne les a, et ceux qui prétendent le contraire vous mentent. Ce que je propose, c'est une autre manière de faire : voir clair, partir du terrain, s'inspirer de ce qui marche, tester avant d'imposer, et rendre des comptes à chaque étape.</p>
+<p>Si ces idées vous parlent, partagez-les. Si vous n'êtes pas d'accord, dites-le-moi : c'est comme ça qu'un programme s'améliore.</p>
+<p><strong>Rendez-nous des comptes.</strong></p>
+<p>Viktor Venet</p>
+<h4 id="sources-principales">Sources principales</h4>
+<ul><li>Défenseur des droits, rapport annuel 2025 (165 011 sollicitations, +20 % sur les relations avec les services publics) : <a href="https://acteurspublics.fr/articles/services-publics-le-defenseur-des-droits-pointe-une-erosion-du-lien-avec-les-usagers/" rel="noopener">Acteurs publics</a>, <a href="https://www.banquedesterritoires.fr/les-ravages-de-la-dematerialisation-nouveau-denonces-par-la-defenseure-des-droits" rel="noopener">Banque des territoires</a></li><li>Non-recours au RSA et à la prime d'activité : <a href="https://www.drees.solidarites-sante.gouv.fr/sites/default/files/2026-07/ER1379_Non-recours_PA.pdf" rel="noopener">DREES, note 1379 (2026)</a>, <a href="https://www.banquedesterritoires.fr/un-tiers-des-foyers-eligibles-ne-demandent-pas-le-rsa-et-perdent-en-moyenne-330-euros-par-mois" rel="noopener">Banque des territoires</a></li><li>CADA, saisines et délais : <a href="https://acteurspublics.fr/articles/a-la-cada-des-delais-encore-raccourcis-face-a-des-demandes-toujours-plus-nombreuses/" rel="noopener">Acteurs publics</a>, <a href="https://www.senat.fr/questions/base/2025/qSEQ250203135.html" rel="noopener">Sénat, question écrite 2025</a></li><li>Temps scolaire : <a href="https://www.oecd.org/fr/publications/regards-sur-l-education-2025_b26d545c-fr/full-report/how-much-time-do-students-spend-in-the-classroom_5ae440db.html" rel="noopener">OCDE, Regards sur l'éducation 2025</a>, <a href="https://eurydice.eacea.ec.europa.eu/publications/organisation-school-time-europe-primary-and-general-secondary-education-202122" rel="noopener">Eurydice</a></li><li>Norme d'encadrement norvégienne : <a href="https://www.regjeringen.no/no/aktuelt/nye-regler-innforing-av-larernorm-i-grunnskolen/id2606134/" rel="noopener">Gouvernement norvégien</a></li><li>Semaine courte : Islande, <a href="https://www.journaldeleconomie.fr/la-semaine-de-4-jours-a-t-elle-tenu-ses-promesses-lislande-livre-enfin-son-verdict/" rel="noopener">Journal de l'économie</a> ; Royaume-Uni, <a href="https://www.sociology.cam.ac.uk/news/new-results-worlds-largest-trial-four-day-working-week" rel="noopener">Université de Cambridge</a></li><li>Rémunérations : <a href="https://www.lafinancepourtous.com/decryptages/finance-et-societe/finance-et-politique/etre-elu-en-france-combien-ca-rapporte/" rel="noopener">La finance pour tous</a>, <a href="https://www.publicsenat.fr/actualites/politique/montants-modalites-comment-est-fixe-la-remuneration-des-ministres" rel="noopener">Public Sénat</a>, SMIC : <a href="https://www.info.gouv.fr/actualite/le-smic-revalorise-au-1er-janvier-2026" rel="noopener">info.gouv.fr</a></li><li>Travail en soirée (loi de 2015) : <a href="https://cms.law/fr/fra/a-la-une/le-nouveau-regime-du-travail-dominical-et-en-soiree-issu-de-la-loi-macron" rel="noopener">CMS</a></li><li>Électricité 2025 : <a href="https://www.les-energies-renouvelables.eu/article/actualites/energies/exportations-delectricite-la-france-bat-un-record-en-2025-92-twh-nets-226/" rel="noopener">Les Énergies renouvelables</a> ; Flamanville : <a href="https://www.journaldeleconomie.fr/?p=35733" rel="noopener">Journal de l'économie</a></li></ul>
+<p><em>Chiffres vérifiés en octobre 2026 à partir de sources de presse et institutionnelles. À reconfirmer sur les publications officielles (RTE, DREES, CADA, Défenseur des droits) avant les débats.</em></p>
+  <a class="back" href="index.html">← Retour à l'accueil</a>
+  </article>
+</div>
+<footer><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+  <p><strong>Rendez-nous des comptes.</strong> Programme de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat.</p>
+  <p>Directeur de la publication : Viktor Venet. Hébergement : GitHub Pages, GitHub Inc., San Francisco, États-Unis.</p>
+</div></footer>
+</body>
+</html>
