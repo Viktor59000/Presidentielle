@@ -3,43 +3,97 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Programme Venet 2027</title>
-<meta name="description" content="Le programme complet de Viktor Venet, expliqué : le constat, la méthode, les 16 mesures et les positions. Rendez-nous des comptes.">
-<meta property="og:title" content="Le programme expliqué · Venet 2027">
-<meta property="og:image" content="https://viktor59000.github.io/Presidentielle/img/og.png">
+<title>Le programme complet · Venet 2027</title>
+<meta name="description" content="Le programme de Viktor Venet expliqué : le constat, la méthode, les 16 mesures, les positions, les objections et les sources.">
+<link rel="canonical" href="https://viktor59000.github.io/Presidentielle/programme.html">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Venet 2027">
+<meta property="og:url" content="https://viktor59000.github.io/Presidentielle/programme.html">
+<meta property="og:title" content="Le programme complet · Venet 2027">
+<meta property="og:description" content="Le programme de Viktor Venet expliqué : le constat, la méthode, les 16 mesures, les positions, les objections et les sources.">
+<meta property="og:image" content="https://viktor59000.github.io/Presidentielle/img/og-programme.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#FF5A1F">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap">
-<style>
-/* Page longue de lecture : colonne de texte à ~68 caractères, sommaire collant à gauche sur grand écran. */
+<link rel="preload" href="fonts/BigShouldersDisplay-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/SchibstedGrotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:900;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:900;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-italic-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
 :root {
   --paper: #ffffff; --paper-2: #f1f2f4; --ink: #15171c; --muted: #5b6070; --rule: #dcdee3;
-  --orange: #ff5a1f; --orange-text: #c2410c;
+  --orange: #ff5a1f; --orange-text: #c2410c; --ok: #1f7a4d;
   --ff-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --ff-body: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; color-scheme: dark; }
+  :root:not([data-theme="light"]) { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; --ok: #4ccf8f; color-scheme: dark; }
 }
-:root[data-theme="dark"] { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; color-scheme: dark; }
+:root[data-theme="dark"] { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; --ok: #4ccf8f; color-scheme: dark; }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.7 var(--ff-body); -webkit-font-smoothing: antialiased; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--ff-body); -webkit-font-smoothing: antialiased; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
 a { color: var(--orange-text); text-underline-offset: 3px; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .92; text-wrap: balance; }
 .wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 4vw); }
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); }
 .top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
+.logo { display: inline-flex; }
 .logo svg { height: 22px; width: auto; display: block; }
 .logo .l { fill: var(--ink); } .logo .b { fill: var(--orange); }
 .top nav { display: flex; flex-wrap: wrap; margin-inline: -10px; }
 .top nav a { color: var(--muted); text-decoration: none; font-weight: 500; padding: 10px; min-height: 44px; display: inline-flex; align-items: center; }
-.top nav a:hover { color: var(--ink); }
+.top nav a:hover, .top nav a[aria-current] { color: var(--ink); }
+.cover { background: var(--orange); color: #15171c; }
+.cover .wrap { padding-block: clamp(40px, 6vw, 72px); display: grid; gap: 18px; }
+.cover .k { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
+.cover h1 { font-size: clamp(3rem, 10vw, 7.5rem); line-height: .86; }
+.cover p { font-size: 1.15rem; max-width: 56ch; border-top: 2px solid #15171c; padding-top: 16px; }
+section.sec { padding-block: clamp(48px, 7vw, 88px) 0; }
+.sec h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 8px; }
+.sec .intro { color: var(--muted); max-width: 60ch; margin-bottom: 28px; }
+.rule { border-top: 2px solid var(--ink); }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; font: 700 1rem var(--ff-body); text-decoration: none; border: 2px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; transition: background-color .2s, color .2s; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn.solid:hover { background: transparent; color: var(--ink); }
+footer { margin-top: clamp(72px, 10vw, 112px); background: #15171c; color: #a3a8b5; }
+footer .wrap { padding-block: 40px; font-size: .92rem; display: grid; gap: 8px; }
+footer strong { color: #fff; }
+footer .logo .l { fill: #fff; }
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--ink); color: var(--paper); padding: 10px 14px; z-index: 20; }
+footer .wrap { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px 48px; }
+footer .slogan { font: 900 2rem/1 var(--ff-display); text-transform: uppercase; color: #fff; margin-top: 18px; }
+footer .liens { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; padding: 0; list-style: none; }
+footer .liens a { color: #fff; text-decoration: none; display: inline-flex; min-height: 36px; align-items: center; }
+footer .liens a:hover { color: var(--orange); }
+footer .legal { grid-column: 1 / -1; border-top: 1px solid #2e323b; padding-top: 18px; display: grid; gap: 4px; }
+@media (max-width: 860px) { footer .wrap { grid-template-columns: minmax(0, 1fr); } }
+a { color: var(--orange-text); text-underline-offset: 3px; }
 .cover { background: var(--orange); color: #15171c; }
 .cover .wrap { padding-block: clamp(40px, 7vw, 80px); display: grid; gap: 20px; }
 .cover .k { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
@@ -54,7 +108,6 @@ a { color: var(--orange-text); text-underline-offset: 3px; }
 .toc a:hover { color: var(--orange-text); }
 article.doc { max-width: 68ch; min-width: 0; }
 .doc h2, .doc h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .95; text-wrap: balance; }
-
 .doc h2.part .pk { display: block; font: 700 .8rem var(--ff-body); letter-spacing: .12em; color: var(--orange-text); margin-bottom: 10px; }
 .doc h2.part { font-size: clamp(2.6rem, 6vw, 4.2rem); margin: 0 0 28px; }
 .part-mark { display: grid; gap: 5px; width: 36px; margin: 72px 0 18px; }
@@ -70,10 +123,6 @@ article.doc { max-width: 68ch; min-width: 0; }
 .doc ul li::marker { color: var(--orange-text); }
 .doc em { color: var(--muted); }
 .back { display: inline-flex; margin-top: 40px; font-weight: 700; color: var(--ink); }
-footer { margin-top: 96px; background: #15171c; color: #a3a8b5; }
-footer .wrap { padding-block: 40px; font-size: .92rem; display: grid; gap: 8px; }
-footer strong { color: #fff; }
-footer .logo .l { fill: #fff; }
 @media (max-width: 900px) {
   .layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 32px; }
   .toc { position: static; }
@@ -81,10 +130,12 @@ footer .logo .l { fill: #fff; }
 </style>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 <header class="top"><div class="wrap">
   <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
-  <nav aria-label="Navigation"><a href="index.html">Accueil</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
+  <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="programme.html" aria-current=page>Programme</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
 </div></header>
+<main id="contenu">
 <section class="cover"><div class="wrap">
   <span class="k">Le programme complet · version 1, octobre 2026</span>
   <h1>Rendez-nous<br>des comptes.</h1>
@@ -299,13 +350,27 @@ footer .logo .l { fill: #fff; }
 <h4 id="sources-principales">Sources principales</h4>
 <ul><li>Défenseur des droits, rapport annuel 2025 (165 011 sollicitations, +20 % sur les relations avec les services publics) : <a href="https://acteurspublics.fr/articles/services-publics-le-defenseur-des-droits-pointe-une-erosion-du-lien-avec-les-usagers/" rel="noopener">Acteurs publics</a>, <a href="https://www.banquedesterritoires.fr/les-ravages-de-la-dematerialisation-nouveau-denonces-par-la-defenseure-des-droits" rel="noopener">Banque des territoires</a></li><li>Non-recours au RSA et à la prime d'activité : <a href="https://www.drees.solidarites-sante.gouv.fr/sites/default/files/2026-07/ER1379_Non-recours_PA.pdf" rel="noopener">DREES, note 1379 (2026)</a>, <a href="https://www.banquedesterritoires.fr/un-tiers-des-foyers-eligibles-ne-demandent-pas-le-rsa-et-perdent-en-moyenne-330-euros-par-mois" rel="noopener">Banque des territoires</a></li><li>CADA, saisines et délais : <a href="https://acteurspublics.fr/articles/a-la-cada-des-delais-encore-raccourcis-face-a-des-demandes-toujours-plus-nombreuses/" rel="noopener">Acteurs publics</a>, <a href="https://www.senat.fr/questions/base/2025/qSEQ250203135.html" rel="noopener">Sénat, question écrite 2025</a></li><li>Temps scolaire : <a href="https://www.oecd.org/fr/publications/regards-sur-l-education-2025_b26d545c-fr/full-report/how-much-time-do-students-spend-in-the-classroom_5ae440db.html" rel="noopener">OCDE, Regards sur l'éducation 2025</a>, <a href="https://eurydice.eacea.ec.europa.eu/publications/organisation-school-time-europe-primary-and-general-secondary-education-202122" rel="noopener">Eurydice</a></li><li>Norme d'encadrement norvégienne : <a href="https://www.regjeringen.no/no/aktuelt/nye-regler-innforing-av-larernorm-i-grunnskolen/id2606134/" rel="noopener">Gouvernement norvégien</a></li><li>Semaine courte : Islande, <a href="https://www.journaldeleconomie.fr/la-semaine-de-4-jours-a-t-elle-tenu-ses-promesses-lislande-livre-enfin-son-verdict/" rel="noopener">Journal de l'économie</a> ; Royaume-Uni, <a href="https://www.sociology.cam.ac.uk/news/new-results-worlds-largest-trial-four-day-working-week" rel="noopener">Université de Cambridge</a></li><li>Rémunérations : <a href="https://www.lafinancepourtous.com/decryptages/finance-et-societe/finance-et-politique/etre-elu-en-france-combien-ca-rapporte/" rel="noopener">La finance pour tous</a>, <a href="https://www.publicsenat.fr/actualites/politique/montants-modalites-comment-est-fixe-la-remuneration-des-ministres" rel="noopener">Public Sénat</a>, SMIC : <a href="https://www.info.gouv.fr/actualite/le-smic-revalorise-au-1er-janvier-2026" rel="noopener">info.gouv.fr</a></li><li>Travail en soirée (loi de 2015) : <a href="https://cms.law/fr/fra/a-la-une/le-nouveau-regime-du-travail-dominical-et-en-soiree-issu-de-la-loi-macron" rel="noopener">CMS</a></li><li>Électricité 2025 : <a href="https://www.les-energies-renouvelables.eu/article/actualites/energies/exportations-delectricite-la-france-bat-un-record-en-2025-92-twh-nets-226/" rel="noopener">Les Énergies renouvelables</a> ; Flamanville : <a href="https://www.journaldeleconomie.fr/?p=35733" rel="noopener">Journal de l'économie</a></li></ul>
 <p><em>Chiffres vérifiés en octobre 2026 à partir de sources de presse et institutionnelles. À reconfirmer sur les publications officielles (RTE, DREES, CADA, Défenseur des droits) avant les débats.</em></p>
-  <a class="back" href="index.html">← Retour à l'accueil</a>
+  <p class="back"><a href="quiz.html">Êtes-vous d'accord ? Faites le quiz</a> · <a href="index.html">Retour à l'accueil</a></p>
   </article>
 </div>
+</main>
 <footer><div class="wrap">
-  <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
-  <p><strong>Rendez-nous des comptes.</strong> Programme de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat.</p>
-  <p>Directeur de la publication : Viktor Venet. Hébergement : GitHub Pages, GitHub Inc., San Francisco, États-Unis.</p>
+  <div>
+    <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+    <p class="slogan">Rendez-nous des comptes.</p>
+  </div>
+  <ul class="liens">
+    <li><a href="programme.html">Le programme complet</a></li>
+    <li><a href="quiz.html">Le quiz</a></li>
+    <li><a href="comptes.html">Les comptes de la campagne</a></li>
+    <li><a href="presse.html">Espace presse</a></li>
+    <li><a href="mentions-legales.html">Mentions légales</a></li>
+  </ul>
+  <div class="legal">
+    <p>Site de campagne de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat.</p>
+    <p>Aucun cookie, aucun traceur, aucune donnée collectée. Aucun don accepté pour le moment.</p>
+  </div>
 </div></footer>
+
 </body>
 </html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://viktor59000.github.io/Presidentielle/sitemap.xml

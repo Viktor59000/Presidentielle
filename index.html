@@ -3,81 +3,102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Viktor Venet 2027</title>
-<meta name="description" content="Viktor Venet, 20 ans, étudiant stéphanois sans parti, candidat à la présidentielle 2027. Rendez-nous des comptes.">
-<meta property="og:title" content="Venet 2027 · Rendez-nous des comptes.">
-<meta property="og:description" content="Un citoyen de 20 ans, une IA, zéro euro. Des services publics qui répondent et un pouvoir transparent.">
-<meta property="og:image" content="https://viktor59000.github.io/Presidentielle/img/og.png">
+<title>Viktor Venet 2027 · Rendez-nous des comptes</title>
+<meta name="description" content="Viktor Venet, 20 ans, étudiant stéphanois sans parti, candidat à la présidentielle 2027. Un programme de 16 mesures pour un État qui rend des comptes.">
+<link rel="canonical" href="https://viktor59000.github.io/Presidentielle/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Venet 2027">
+<meta property="og:url" content="https://viktor59000.github.io/Presidentielle/">
+<meta property="og:title" content="Viktor Venet 2027 · Rendez-nous des comptes">
+<meta property="og:description" content="Viktor Venet, 20 ans, étudiant stéphanois sans parti, candidat à la présidentielle 2027. Un programme de 16 mesures pour un État qui rend des comptes.">
+<meta property="og:image" content="https://viktor59000.github.io/Presidentielle/img/og-index.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#FF5A1F">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Schibsted+Grotesk:wght@400;500;700&display=swap">
-<style>
-/* Identité Venet 2027 : encre + orange chantier. Le signe égal (≡) des E du logo sert de motif.
-   Mise en page « relevé de comptes » : lignes numérotées, filets fins, chiffres alignés. */
+<link rel="preload" href="fonts/BigShouldersDisplay-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/SchibstedGrotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:900;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:900;font-display:swap;src:url(fonts/BigShouldersDisplay-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-italic-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/SchibstedGrotesk-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
 :root {
-  --paper: #ffffff;
-  --paper-2: #f1f2f4;
-  --ink: #15171c;
-  --muted: #5b6070;
-  --rule: #dcdee3;
-  --orange: #ff5a1f;
-  --orange-text: #c2410c;
-  --on-orange: #15171c;
+  --paper: #ffffff; --paper-2: #f1f2f4; --ink: #15171c; --muted: #5b6070; --rule: #dcdee3;
+  --orange: #ff5a1f; --orange-text: #c2410c; --ok: #1f7a4d;
   --ff-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --ff-body: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b;
-    --orange-text: #ff7a45; color-scheme: dark;
-  }
+  :root:not([data-theme="light"]) { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; --ok: #4ccf8f; color-scheme: dark; }
 }
-:root[data-theme="dark"] {
-  --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b;
-  --orange-text: #ff7a45; color-scheme: dark;
-}
-
+:root[data-theme="dark"] { --paper: #15171c; --paper-2: #1e2128; --ink: #f3f4f6; --muted: #a3a8b5; --rule: #2e323b; --orange-text: #ff7a45; --ok: #4ccf8f; color-scheme: dark; }
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0; background: var(--paper); color: var(--ink);
-  font: 400 1.0625rem/1.6 var(--ff-body);
-  padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
-  -webkit-font-smoothing: antialiased;
-}
-.wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 4vw); }
-a { color: inherit; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--ff-body); -webkit-font-smoothing: antialiased; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+a { color: var(--orange-text); text-underline-offset: 3px; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 h1, h2, h3, h4, p { margin: 0; }
-h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .92; letter-spacing: .005em; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .92; text-wrap: balance; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 4vw); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
+.logo { display: inline-flex; }
+.logo svg { height: 22px; width: auto; display: block; }
+.logo .l { fill: var(--ink); } .logo .b { fill: var(--orange); }
+.top nav { display: flex; flex-wrap: wrap; margin-inline: -10px; }
+.top nav a { color: var(--muted); text-decoration: none; font-weight: 500; padding: 10px; min-height: 44px; display: inline-flex; align-items: center; }
+.top nav a:hover, .top nav a[aria-current] { color: var(--ink); }
+.cover { background: var(--orange); color: #15171c; }
+.cover .wrap { padding-block: clamp(40px, 6vw, 72px); display: grid; gap: 18px; }
+.cover .k { font: 700 .78rem var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
+.cover h1 { font-size: clamp(3rem, 10vw, 7.5rem); line-height: .86; }
+.cover p { font-size: 1.15rem; max-width: 56ch; border-top: 2px solid #15171c; padding-top: 16px; }
+section.sec { padding-block: clamp(48px, 7vw, 88px) 0; }
+.sec h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 8px; }
+.sec .intro { color: var(--muted); max-width: 60ch; margin-bottom: 28px; }
+.rule { border-top: 2px solid var(--ink); }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; font: 700 1rem var(--ff-body); text-decoration: none; border: 2px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; transition: background-color .2s, color .2s; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn.solid:hover { background: transparent; color: var(--ink); }
+footer { margin-top: clamp(72px, 10vw, 112px); background: #15171c; color: #a3a8b5; }
+footer .wrap { padding-block: 40px; font-size: .92rem; display: grid; gap: 8px; }
+footer strong { color: #fff; }
+footer .logo .l { fill: #fff; }
+
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 16px; background: var(--ink); color: var(--paper); padding: 10px 14px; z-index: 20; }
-
-/* Le motif ≡ */
+footer .wrap { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px 48px; }
+footer .slogan { font: 900 2rem/1 var(--ff-display); text-transform: uppercase; color: #fff; margin-top: 18px; }
+footer .liens { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; padding: 0; list-style: none; }
+footer .liens a { color: #fff; text-decoration: none; display: inline-flex; min-height: 36px; align-items: center; }
+footer .liens a:hover { color: var(--orange); }
+footer .legal { grid-column: 1 / -1; border-top: 1px solid #2e323b; padding-top: 18px; display: grid; gap: 4px; }
+@media (max-width: 860px) { footer .wrap { grid-template-columns: minmax(0, 1fr); } }
+:root { --on-orange: #15171c; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: uppercase; line-height: .92; letter-spacing: .005em; text-wrap: balance; }
 .eq { display: inline-grid; gap: 3px; width: 18px; flex: none; }
 .eq i { display: block; height: 4px; background: var(--orange); }
 .label { display: inline-flex; align-items: center; gap: 10px; font: 700 .78rem/1 var(--ff-body); letter-spacing: .12em; text-transform: uppercase; }
-
-/* Logo */
-.logo { display: inline-flex; align-items: center; text-decoration: none; }
-.logo svg { height: 22px; width: auto; display: block; }
-.logo .l { fill: var(--ink); }
-.logo .b { fill: var(--orange); }
-
-/* En-tête */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); }
-.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
-.top nav { display: flex; flex-wrap: wrap; gap: 2px; margin-inline: -10px; }
-.top nav a { font: 500 .92rem var(--ff-body); text-decoration: none; color: var(--muted); padding: 10px; min-height: 44px; display: inline-flex; align-items: center; }
-.top nav a:hover { color: var(--ink); }
-
-/* Hero : bandeau orange, comme une affiche */
 .hero { background: var(--orange); color: var(--on-orange); }
 .hero .wrap { padding-block: clamp(40px, 7vw, 88px) clamp(36px, 6vw, 72px); display: grid; gap: clamp(28px, 4vw, 44px); }
 .hero h1 { font-size: clamp(3.6rem, 13vw, 11.5rem); line-height: .84; letter-spacing: -.005em; }
@@ -91,8 +112,6 @@ h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: u
 .btn.line { color: #15171c; }
 .btn.line:hover { background: #15171c; color: #fff; }
 .btn svg { width: 18px; height: 18px; }
-
-/* Compteurs */
 .stats { background: #15171c; color: #f3f4f6; }
 .stats .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .stat { padding: 24px 24px 26px 0; }
@@ -101,14 +120,10 @@ h1, h2, h3 { font-family: var(--ff-display); font-weight: 900; text-transform: u
 .stat .n { font: 900 clamp(2.6rem, 6vw, 4rem)/1 var(--ff-display); font-variant-numeric: tabular-nums; margin-top: 8px; }
 .stat .n small { font: 500 1rem var(--ff-body); color: #a3a8b5; margin-left: 6px; }
 .stat .n .o { color: var(--orange); }
-
-/* Sections */
 section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
 .head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px 48px; margin-bottom: 40px; align-items: end; }
 .head h2 { font-size: clamp(2.6rem, 6.5vw, 5rem); }
 .head p { color: var(--muted); font-size: 1.1rem; max-width: 54ch; margin-top: 14px; }
-
-/* Programme : relevé de lignes */
 .groupe { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px 48px; border-top: 2px solid var(--ink); padding-block: 22px 8px; }
 .groupe h3 { font-size: 1.9rem; }
 .groupe .g { color: var(--muted); font: 500 .8rem var(--ff-body); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
@@ -119,23 +134,17 @@ section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
 .ligne h4 { font: 700 1.12rem/1.3 var(--ff-body); }
 .ligne p { color: var(--muted); margin-top: 4px; max-width: 62ch; }
 .modele { display: inline-block; margin-top: 10px; font: 700 .72rem/1 var(--ff-body); letter-spacing: .08em; text-transform: uppercase; background: var(--paper-2); padding: 6px 9px; }
-
-/* Méthode */
 .etapes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
 .etape { padding: 22px 24px 8px 0; display: grid; gap: 10px; align-content: start; }
 .etape + .etape { padding-left: 24px; border-left: 1px solid var(--rule); }
 .etape .n { font: 900 3.4rem/1 var(--ff-display); color: var(--orange-text); }
 .etape h3 { font-size: 2rem; }
 .etape p { color: var(--muted); }
-
-/* Positions */
 .positions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 2px solid var(--ink); }
 .pos { padding-block: 18px 20px; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; }
 .pos .t { font: 700 .78rem var(--ff-body); letter-spacing: .1em; text-transform: uppercase; color: var(--orange-text); }
 .pos h4 { font: 700 1.12rem/1.3 var(--ff-body); }
 .pos p { color: var(--muted); }
-
-/* Jour 1 */
 .chart { display: grid; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px; }
 .barrow { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 16px; align-items: center; }
 .barrow .who { font-weight: 700; }
@@ -147,15 +156,11 @@ section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
 .note .big { font: 900 clamp(2rem, 4vw, 3rem)/.95 var(--ff-display); text-transform: uppercase; }
 .note .big span { color: var(--orange-text); }
 .note p.src { color: var(--muted); font-size: .92rem; }
-
-/* Équipe */
 .team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
 .member { padding: 24px 32px 8px 0; display: grid; gap: 12px; align-content: start; }
 .member + .member { padding-left: 32px; border-left: 1px solid var(--rule); }
 .member .role { font: 700 .78rem var(--ff-body); letter-spacing: .1em; text-transform: uppercase; color: var(--orange-text); }
 .member h3 { font-size: clamp(2.4rem, 5vw, 3.4rem); }
-
-/* Rejoindre */
 .join { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 48px; }
 .maires { background: var(--orange); color: var(--on-orange); padding: clamp(24px, 4vw, 40px); display: grid; gap: 14px; align-content: start; }
 .maires h3 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
@@ -164,16 +169,6 @@ section.sec { padding-block: clamp(64px, 9vw, 112px) 0; }
 .social { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding-block: 18px; border-bottom: 1px solid var(--rule); }
 .social strong { font-weight: 700; }
 .social span { color: var(--muted); }
-
-/* Pied de page */
-footer { margin-top: clamp(72px, 10vw, 120px); background: #15171c; color: #a3a8b5; }
-footer .wrap { padding-block: 44px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 48px; font-size: .92rem; }
-footer .logo svg { height: 30px; }
-footer .logo .l { fill: #fff; }
-footer .slogan { font: 900 2rem/1 var(--ff-display); text-transform: uppercase; color: #fff; margin-top: 20px; }
-footer p + p { margin-top: 8px; }
-footer strong { color: #fff; }
-
 @media (max-width: 860px) {
   .hero-foot, .head, .groupe, .note, .join, footer .wrap { grid-template-columns: minmax(0, 1fr); }
   .cta { justify-content: flex-start; }
@@ -188,28 +183,21 @@ footer strong { color: #fff; }
   .barrow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .fill { height: 26px; }
 }
+
+.more { display: inline-flex; margin-top: 10px; font: 700 .9rem var(--ff-body); color: var(--orange-text); text-decoration: underline; text-underline-offset: 3px; min-height: 32px; align-items: center; }
+.more:hover { color: var(--ink); }
+.ligne .modele + .more { margin-left: 14px; }
 </style>
 </head>
 <body>
-<a class="skip" href="#programme">Aller au programme</a>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+  <nav aria-label="Navigation principale"><a href="index.html" aria-current=page>Accueil</a><a href="programme.html">Programme</a><a href="quiz.html">Quiz</a><a href="comptes.html">Les comptes</a><a href="presse.html">Presse</a></nav>
+</div></header>
+<main id="contenu">
 
-<header class="top">
-  <div class="wrap">
-    <a class="logo" href="#haut" id="haut" aria-label="Venet 2027, accueil">
-      <svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg>
-    </a>
-    <nav aria-label="Sections du site">
-      <a href="programme.html">Programme</a>
-      <a href="#positions">Positions</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="comptes.html">Les comptes</a>
-      <a href="presse.html">Presse</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
+<section class="hero">
     <div class="wrap">
       <span class="label">Présidentielle 2027 · candidature citoyenne</span>
       <h1>Rendez-nous<br>des comptes.</h1>
@@ -245,52 +233,52 @@ footer strong { color: #fff; }
       <div class="groupe">
         <div><p class="g">Bloc A</p><h3>Des services publics qui répondent</h3></div>
         <div class="lignes">
-          <article class="ligne"><span class="no">01</span><div><h4>Ton dossier suivi comme un colis</h4><p>CAF, CPAM, France Travail, préfectures : où en est ton dossier, qui le traite, quand il sera fini. En ligne, en temps réel.</p></div></article>
-          <article class="ligne"><span class="no">02</span><div><h4>Les délais réels publiés chaque mois</h4><p>Chaque organisme affiche ses vrais délais, département par département.</p></div></article>
-          <article class="ligne"><span class="no">03</span><div><h4>Le droit à un humain</h4><p>Un numéro joignable, ou un rappel garanti sous 48 h par quelqu'un qui a ton dossier sous les yeux.</p></div></article>
+          <article class="ligne"><span class="no">01</span><div><h4>Ton dossier suivi comme un colis</h4><p>CAF, CPAM, France Travail, préfectures : où en est ton dossier, qui le traite, quand il sera fini. En ligne, en temps réel.</p><a class="more" href="programme.html#mesure-1-ton-dossier-suivi-comme-un-colis">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">02</span><div><h4>Les délais réels publiés chaque mois</h4><p>Chaque organisme affiche ses vrais délais, département par département.</p><a class="more" href="programme.html#mesure-2-les-delais-reels-publies-chaque-mois">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">03</span><div><h4>Le droit à un humain</h4><p>Un numéro joignable, ou un rappel garanti sous 48 h par quelqu'un qui a ton dossier sous les yeux.</p><a class="more" href="programme.html#mesure-3-le-droit-a-un-humain">Lire l'explication complète</a></div></article>
         </div>
       </div>
 
       <div class="groupe">
         <div><p class="g">Bloc B</p><h3>Le terrain aux commandes</h3></div>
         <div class="lignes">
-          <article class="ligne"><span class="no">04</span><div><h4>Des ministres qui connaissent le métier</h4><p>Une ancienne enseignante à l'Éducation, un soignant à la Santé, un agriculteur à l'Agriculture.</p></div></article>
-          <article class="ligne"><span class="no">05</span><div><h4>Une audition publique avant chaque nomination</h4><p>Chaque futur ministre s'explique en direct devant des professionnels de son secteur.</p></div></article>
-          <article class="ligne"><span class="no">06</span><div><h4>Des conseils de praticiens</h4><p>Des professionnels tirés au sort rendent un avis public avant chaque grande réforme.</p></div></article>
+          <article class="ligne"><span class="no">04</span><div><h4>Des ministres qui connaissent le métier</h4><p>Une ancienne enseignante à l'Éducation, un soignant à la Santé, un agriculteur à l'Agriculture.</p><a class="more" href="programme.html#mesure-4-des-ministres-qui-connaissent-le-metier">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">05</span><div><h4>Une audition publique avant chaque nomination</h4><p>Chaque futur ministre s'explique en direct devant des professionnels de son secteur.</p><a class="more" href="programme.html#mesure-5-une-audition-publique-avant-chaque-nomination">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">06</span><div><h4>Des conseils de praticiens</h4><p>Des professionnels tirés au sort rendent un avis public avant chaque grande réforme.</p><a class="more" href="programme.html#mesure-6-des-conseils-de-praticiens">Lire l'explication complète</a></div></article>
         </div>
       </div>
 
       <div class="groupe">
         <div><p class="g">Bloc C</p><h3>S'inspirer de ce qui marche ailleurs</h3></div>
         <div class="lignes">
-          <article class="ligne"><span class="no">07</span><div><h4>Une cellule « ça marche ailleurs »</h4><p>Chaque mois, une mesure étrangère qui a fait ses preuves, proposée pour la France.</p></div></article>
-          <article class="ligne"><span class="no">08</span><div><h4>Des journées d'école moins longues</h4><p>Nos élèves ont plus d'heures de cours que la moyenne de l'OCDE, tassées sur moins de semaines. On étale l'année pour alléger les journées.</p><span class="modele">Modèle : Allemagne</span></div></article>
-          <article class="ligne"><span class="no">09</span><div><h4>Des classes plus petites</h4><p>Une norme nationale : au maximum 15 élèves par enseignant en début de primaire, 20 ensuite.</p><span class="modele">Modèle : Norvège</span></div></article>
+          <article class="ligne"><span class="no">07</span><div><h4>Une cellule « ça marche ailleurs »</h4><p>Chaque mois, une mesure étrangère qui a fait ses preuves, proposée pour la France.</p><a class="more" href="programme.html#mesure-7-une-cellule-ca-marche-ailleurs">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">08</span><div><h4>Des journées d'école moins longues</h4><p>Nos élèves ont plus d'heures de cours que la moyenne de l'OCDE, tassées sur moins de semaines. On étale l'année pour alléger les journées.</p><span class="modele">Modèle : Allemagne</span><a class="more" href="programme.html#mesure-8-des-journees-d-ecole-moins-longues">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">09</span><div><h4>Des classes plus petites</h4><p>Une norme nationale : au maximum 15 élèves par enseignant en début de primaire, 20 ensuite.</p><span class="modele">Modèle : Norvège</span><a class="more" href="programme.html#mesure-9-des-classes-plus-petites">Lire l'explication complète</a></div></article>
         </div>
       </div>
 
       <div class="groupe">
         <div><p class="g">Bloc D</p><h3>Travailler mieux, pas plus longtemps</h3></div>
         <div class="lignes">
-          <article class="ligne"><span class="no">10</span><div><h4>La semaine de 4 jours, 32 heures</h4><p>Sans baisse de salaire. D'abord par accords d'entreprise volontaires, puis on généralise ce qui marche.</p><span class="modele">Modèle : Islande</span></div></article>
-          <article class="ligne"><span class="no">11</span><div><h4>Juger le travail au résultat</h4><p>Là où c'est possible, on évalue les objectifs atteints, pas les heures passées assis. Salaire et protections inchangés.</p></div></article>
+          <article class="ligne"><span class="no">10</span><div><h4>La semaine de 4 jours, 32 heures</h4><p>Sans baisse de salaire. D'abord par accords d'entreprise volontaires, puis on généralise ce qui marche.</p><span class="modele">Modèle : Islande</span><a class="more" href="programme.html#mesure-10-la-semaine-de-4-jours-32-heures">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">11</span><div><h4>Juger le travail au résultat</h4><p>Là où c'est possible, on évalue les objectifs atteints, pas les heures passées assis. Salaire et protections inchangés.</p><a class="more" href="programme.html#mesure-11-juger-le-travail-au-resultat">Lire l'explication complète</a></div></article>
         </div>
       </div>
 
       <div class="groupe">
         <div><p class="g">Bloc E</p><h3>Un pouvoir qui rend des comptes</h3></div>
         <div class="lignes">
-          <article class="ligne"><span class="no">12</span><div><h4>Jour 1 : je commence par moi</h4><p>Un décret le premier jour pour baisser le salaire du président et des ministres. Un audit public des avantages au sommet de l'État. Un projet de loi pour les indemnités des parlementaires.</p></div></article>
-          <article class="ligne"><span class="no">13</span><div><h4>Les dossiers des ministres en accès libre</h4><p>Notes, études, agendas : publiés par défaut et consultables par tous, sans demande ni recours.</p><span class="modele">Modèle : Suède</span></div></article>
-          <article class="ligne"><span class="no">14</span><div><h4>Chaque élu écoutable en direct</h4><p>Un poste avec micro pour chaque député et sénateur, diffusé en direct. La présence est publiée, et une absence devient un choix visible.</p></div></article>
+          <article class="ligne"><span class="no">12</span><div><h4>Jour 1 : je commence par moi</h4><p>Un décret le premier jour pour baisser le salaire du président et des ministres. Un audit public des avantages au sommet de l'État. Un projet de loi pour les indemnités des parlementaires.</p><a class="more" href="programme.html#mesure-12-jour-1-je-commence-par-moi">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">13</span><div><h4>Les dossiers des ministres en accès libre</h4><p>Notes, études, agendas : publiés par défaut et consultables par tous, sans demande ni recours.</p><span class="modele">Modèle : Suède</span><a class="more" href="programme.html#mesure-13-les-dossiers-des-ministres-en-acces-libre">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">14</span><div><h4>Chaque élu écoutable en direct</h4><p>Un poste avec micro pour chaque député et sénateur, diffusé en direct. La présence est publiée, et une absence devient un choix visible.</p><a class="more" href="programme.html#mesure-14-chaque-elu-ecoutable-en-direct-et-sa-presence-publ">Lire l'explication complète</a></div></article>
         </div>
       </div>
 
       <div class="groupe">
         <div><p class="g">Bloc F</p><h3>Fiers de ce qui marche</h3></div>
         <div class="lignes">
-          <article class="ligne"><span class="no">15</span><div><h4>Des villes qui vivent aussi la nuit</h4><p>Commerces ouverts en soirée et la nuit dans les villes volontaires, avec des salariés volontaires et un salaire majoré. Un maire de la nuit et des transports nocturnes testés en même temps.</p><span class="modele">Modèle : Amsterdam</span></div></article>
-          <article class="ligne"><span class="no">16</span><div><h4>Le nucléaire, une fierté française</h4><p>Environ 68 % de notre électricité en 2025 et un record d'exportations. On prolonge le parc, on construit, on forme en alternance, et le coût de chaque chantier est publié chaque mois.</p></div></article>
+          <article class="ligne"><span class="no">15</span><div><h4>Des villes qui vivent aussi la nuit</h4><p>Commerces ouverts en soirée et la nuit dans les villes volontaires, avec des salariés volontaires et un salaire majoré. Un maire de la nuit et des transports nocturnes testés en même temps.</p><span class="modele">Modèle : Amsterdam</span><a class="more" href="programme.html#mesure-15-des-villes-qui-vivent-aussi-la-nuit">Lire l'explication complète</a></div></article>
+          <article class="ligne"><span class="no">16</span><div><h4>Le nucléaire, une fierté française</h4><p>Environ 68 % de notre électricité en 2025 et un record d'exportations. On prolonge le parc, on construit, on forme en alternance, et le coût de chaque chantier est publié chaque mois.</p><a class="more" href="programme.html#mesure-16-le-nucleaire-une-fierte-francaise">Lire l'explication complète</a></div></article>
         </div>
       </div>
     </div>
@@ -417,33 +405,25 @@ footer strong { color: #fff; }
       </div>
     </div>
   </section>
+
 </main>
-
-<footer>
-  <div class="wrap">
-    <div>
-      <a class="logo" href="#haut" aria-label="Venet 2027, retour en haut">
-        <svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg>
-      </a>
-      <p class="slogan">Rendez-nous des comptes.</p>
-      <p style="margin-top:16px">Site de campagne de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat. Aucun don n'est collecté pour le moment.</p>
-    </div>
-    <div>
-      <p><strong>Mentions légales.</strong> Directeur de la publication : Viktor Venet.</p>
-      <p>Hébergement : GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
-      <p>Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle.</p>
-    </div>
+<footer><div class="wrap">
+  <div>
+    <a class="logo" href="index.html" aria-label="Venet 2027, accueil"><svg viewBox="24 68 532.3 120" aria-hidden="true"><path class="l" d="M24 68 L50 68 L70.15 143.2 L90.3 68 L116.3 68 L84.15 188 L56.15 188 Z M240.3 68 L264.96 68 L312.3 150 L312.3 68 L336.3 68 L336.3 188 L311.64 188 L264.3 106 L264.3 188 L240.3 188 Z M460.3 68 L556.3 68 L556.3 92 L520.3 92 L520.3 188 L496.3 188 L496.3 92 L460.3 92 Z"/><path class="b" d="M138.3 68 L218.3 68 L218.3 92 L138.3 92 Z M138.3 116 L218.3 116 L218.3 140 L138.3 140 Z M138.3 164 L218.3 164 L218.3 188 L138.3 188 Z M358.3 68 L438.3 68 L438.3 92 L358.3 92 Z M358.3 116 L438.3 116 L438.3 140 L358.3 140 Z M358.3 164 L438.3 164 L438.3 188 L358.3 188 Z"/></svg></a>
+    <p class="slogan">Rendez-nous des comptes.</p>
   </div>
-</footer>
+  <ul class="liens">
+    <li><a href="programme.html">Le programme complet</a></li>
+    <li><a href="quiz.html">Le quiz</a></li>
+    <li><a href="comptes.html">Les comptes de la campagne</a></li>
+    <li><a href="presse.html">Espace presse</a></li>
+    <li><a href="mentions-legales.html">Mentions légales</a></li>
+  </ul>
+  <div class="legal">
+    <p>Site de campagne de Viktor Venet, candidat à l'élection présidentielle 2027. Contenus préparés avec l'aide d'une IA, validés et publiés par le candidat.</p>
+    <p>Aucun cookie, aucun traceur, aucune donnée collectée. Aucun don accepté pour le moment.</p>
+  </div>
+</div></footer>
 
-<script>
-  (function () {
-    var el = document.getElementById('jours');
-    var tour = new Date(2027, 3, 18);
-    var auj = new Date(); auj.setHours(0, 0, 0, 0);
-    var j = Math.round((tour - auj) / 86400000);
-    if (j >= 0) el.textContent = j;
-  })();
-</script>
 </body>
 </html>
